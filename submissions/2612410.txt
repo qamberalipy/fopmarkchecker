@@ -1,0 +1,103 @@
+//Q:2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+	int choice,rate,sc=0,gb,price,discount,fprice;
+	
+printf("please select mobile data pack from these:\n 1.Daily pack RS 30 per GB \n 2. Monthly pack RS 20 per GB \n 3. Weekly pack RS 25 per GB \n 4. Business pack RS 15 per GB ");
+scanf("%d",&choice);
+
+switch (choice)
+{
+	case 1:
+		rate=30;
+		break;
+	
+	case 2:
+		rate=20;
+		break;
+	
+	case 3:
+		rate=25;
+		break;
+	case 4:
+		rate=15;
+		sc=50;
+		break;
+}
+printf("please enter the GB you want");
+scanf("%d",&gb);
+
+price=rate*gb;
+if (price>800) {
+	discount=100;
+}
+fprice=price+sc-discount;
+printf("-----your details---- \n");
+printf("\nyour package type is : %d",choice);
+printf("\nyour data in GBs is : %d",gb);
+printf("\nyour price is :%d",price);
+printf("\nyour discount is : %d",discount);
+printf("\nyour service charges is : %d",sc);
+printf("\nyour final payable amount is : %d",fprice);
+return 0;
+}
+
+
+-----------------------------------------------
+Q:4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int n,i,sum=0; //in your code";" this sign was missing so i add this
+	printf("enter N:");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++) // here you only enter < that mean all even number but not N so i add = that mean include N 
+	{
+		if(i%2==0) // you add only single = that mean loop is try to assign value not cheaking the value so i add another =
+		sum=sum+i;
+	}
+	printf("sum of even numbers = %d",sum);
+	return 0;
+}
+
+
+
+--------------------------------------------------------
+//Q:1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+	int i=0,n,m,tmarks;
+	float avgmarks;
+	printf("please enter how many students you want to enter marks");
+	scanf("%d",&n);
+	for (i=0; i<n; i++)
+	{
+		printf("enter a students marks");
+		scanf("%d",&m);
+		if(m<0 || m>100)
+		{
+			printf("\nplease enter valid number");
+			i=i-1;
+		}
+		tmarks=tmarks+m;
+	}
+	printf("total marks is : %d",tmarks-1);
+	avgmarks=(tmarks/n);
+	printf("\naverage marks of the student is : %.2f",avgmarks);
+	return 0;
+
+	
+}
