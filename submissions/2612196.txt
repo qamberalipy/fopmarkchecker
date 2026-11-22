@@ -1,0 +1,77 @@
+Q4:
+int main() {
+	int N,i,sum=0;  //Add the terminator in the end of sum,initialize N
+	printf("Enter N:");
+	scanf("%d", &N);  //Add capital N instead of n
+	for (i=1;i<=N;i++){   //Add capital N in the second condition
+		if (i%2==0){    //Add = in if condition after i%2
+		   sum=sum+i;
+		}
+		
+	}
+	printf("sum of even numbers=%d", sum);
+	
+	return 0;
+}
+
+Q2:
+
+int main (){
+	int marks,N,highestmarks,lowestmarks,averagemarks,per;  //initialize
+	printf("Enter marks of student");
+	scanf("%d", &N);  //input store
+	switch (N){      //loop
+		case 1:
+			printf("highest marks"); //condition
+			break;
+			case 2:
+			printf("lowest marks");
+			break;
+			case 3:
+			printf("average marks");
+			break;
+			case 4:
+				if (marks>=50){
+					printf("Passed");
+			default:
+				printf("Invalid");  //otherwise print that
+				}
+			
+			
+	}
+	printf("Percentage of class", perc=totalmarks/100*700); //print that
+	
+}
+
+Q3:
+
+int main(){
+	int n,sum;   //initialize
+	printf("Enter numbers:");
+	scanf("%d", &n);  //input and store
+	for(n/3 |n/4;n/3;n/5){  //condition
+		printf("ThreeFive\nThree\nFive\n");
+	sum=sum+i;
+	}
+	printf("Number itself");  //otherwise print that
+}
+
+Q1:
+int main(){
+	int packagetype,amountdata,price,discount,servicecharge,finalamount;  //intialize
+	printf("Enter package type and amount of data in (GB)");
+	scanf("%d%d", &packagetype, &amountdata);     //input
+	if(price>800){                               //condition
+		printf("Apply 100percent discount");
+		discount=amount*0.12;
+		finalamount=discount-amount;
+	}
+	printf("give service charges");  // otherwise
+}
+
+
+
+
+
+
+

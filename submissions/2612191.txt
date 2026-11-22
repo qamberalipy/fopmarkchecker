@@ -1,0 +1,193 @@
+
+code for question 2:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+// initialiazations
+int package_type, data_amount;
+int price, discount, discounted_price, charge, final_price;
+// showing menu
+printf("1. daily package: Rs. 30 per GB\n");
+printf("2. weekly package: Rs. 25 per GB\n");
+printf("3. monthly package: Rs. 20 per GB\n");
+printf("4. business package: Rs. 15 per GB\n");
+//inputs
+printf("enter the package type\n");
+scanf("%d",&package_type);
+printf("the package type is %d", package_type);
+printf("enter the data amount\n");
+scanf("%d", &data_amount);
+printf("the data amount is %d", data_amount);
+// switch case
+switch (package_type){
+	case 1: 
+	price = data_amount*30;
+	if(price >800){
+		discount = 100;
+		discounted_price = price-discount;
+		printf("the discount is  rs %d", discount);
+		printf("the final amount is rs %d", discounted_price);
+	}
+	break;
+	
+	case 2: 
+	price = data_amount*25;
+	if(price >800){
+		discount = 100;
+		discounted_price = price-discount;
+		printf("the discount is  rs %d", discount);
+		printf("the final amount is rs %d", discounted_price);}
+	
+	
+	break;
+	
+	case 3: 
+	price = data_amount*20;
+	if(price >800){
+		discount = 100;
+		discounted_price = price-discount;
+		printf("the discount is  rs %d", &discount);
+		printf("the final amount is rs %d", discounted_price);}
+	
+	break;
+	
+	case 4: 
+	charge = 50;
+	price = data_amount*15+charge;
+	printf("the final amount is %d\n", price);
+	printf("the service charge is %d", &charge);
+	
+	break;
+}
+	return 0;
+}
+
+
+
+
+question 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+// initialiations
+int marks;
+int i;
+int highestmarks=0;
+int passcount;
+float passpercentage;
+int lowestmarks = 100;
+float avg;
+int sum;
+printf("enter the number of students");
+scanf("%d",&marks);
+for(i=1;i<=5; i++){
+sum =sum+marks;
+if(marks<0 || marks>100){
+	printf("enter correct marks");
+}
+else if (marks>highestmarks){
+	highestmarks=marks;
+	
+}
+else if (marks<lowestmarks){
+	lowestmarks= marks;
+	
+}
+else {
+	printf("invalid data");
+}
+if (marks>50){
+	passcount =passcount+1;
+}
+}
+avg=marks/5;
+passpercentage = (marks/passcount)*100;
+printf("highest marks =%d", highestmarks);
+printf("lowest marks = %d", lowestmarks);
+printf("pass count is %d", passcount);
+printf("avg is %f", avg);
+printf("pass percentage is %f", passpercentage);
+	
+	return 0;
+}
+
+
+
+
+question 4;
+
+
+code for question 2:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+// initialiazations
+int package_type, data_amount;
+int price, discount, discounted_price, charge, final_price;
+// showing menu
+printf("1. daily package: Rs. 30 per GB\n");
+printf("2. weekly package: Rs. 25 per GB\n");
+printf("3. monthly package: Rs. 20 per GB\n");
+printf("4. business package: Rs. 15 per GB\n");
+//inputs
+printf("enter the package type\n");
+scanf("%d",&package_type);
+printf("the package type is %d", package_type);
+printf("enter the data amount\n");
+scanf("%d", &data_amount);
+printf("the data amount is %d", data_amount);
+// switch case
+switch (package_type){
+	case 1: 
+	price = data_amount*30;
+	if(price >800){
+		discount = 100;
+		discounted_price = price-discount;
+		printf("the discount is  rs %d", discount);
+		printf("the final amount is rs %d", discounted_price);
+	}
+	break;
+	
+	case 2: 
+	price = data_amount*25;
+	if(price >800){
+		discount = 100;
+		discounted_price = price-discount;
+		printf("the discount is  rs %d", discount);
+		printf("the final amount is rs %d", discounted_price);}
+	
+	
+	break;
+	
+	case 3: 
+	price = data_amount*20;
+	if(price >800){
+		discount = 100;
+		discounted_price = price-discount;
+		printf("the discount is  rs %d", &discount);
+		printf("the final amount is rs %d", discounted_price);}
+	
+	break;
+	
+	case 4: 
+	charge = 50;
+	price = data_amount*15+charge;
+	printf("the final amount is %d\n", price);
+	printf("the service charge is %d", &charge);
+	
+	break;
+}
+	return 0;
+}

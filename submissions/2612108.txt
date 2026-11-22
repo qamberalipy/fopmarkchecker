@@ -1,0 +1,200 @@
+q1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,student,mark,stcount=0,highest=0,lowest=0,passed=0,total;
+	float avg,pass_avg;
+	
+	printf("Enter No. of Students: ");
+   scanf("%d",&student);
+   
+   for(i=1;i<=student;i++){
+   
+   printf("Enter Marks of Student(1 to 10): ");
+   scanf("%d",&mark);
+   
+   if (mark<0 || mark>100){
+   	printf("Error");
+   	stcount=0;
+   	continue;
+   }
+   
+   if(mark=0){
+   	highest=0;
+   	lowest=0;
+   } 
+   
+   if (mark > highest){
+   	highest=mark;
+   }
+   if (mark < lowest){
+   	lowest=mark;
+   }
+   if (mark>=50){
+   	passed++;
+   }
+   total=total+mark;
+   }
+   
+   avg= total / student;
+   printf("Highest %d\n",highest);
+   
+   printf("Lowest %d\n",lowest);
+   
+   printf("Average %.2f\n",avg);
+   
+   printf("No of passed students: %d\n",passed);
+   
+printf("passing average: %d\n",pass_avg);
+    return 0;
+}
+
+
+q2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int type,amount,price,rate,discount,service=0,final;
+     
+	printf("---Package Type---\n");
+	printf("1.Daily Pack - Rs. 30 per GB\n");
+	printf("2.Weekly Pack - Rs. 25 per GB\n");
+	printf("3.Monthly Pack - Rs. 20 per GB\n");
+	printf("4.Business Pack - Rs. 15 per GB\n");
+	
+		printf("Enter Package Type: ");
+   scanf("%d",&type);
+	printf("Enter the amount of data: ");
+   scanf("%d",&amount);
+	
+	if (amount<=0){
+		printf("Enter correct amount");
+		return 0;
+	}
+	
+   switch(type){
+   	case 1: 
+	rate = 30;
+	break;
+   	case 2: 
+	rate = 25;
+	break;
+	case 3: 
+	rate = 20;
+	break;
+	case 4: 
+	rate = 15;
+	break;
+	default:
+		printf("Invalid Type");
+		return 0;
+   }
+   price=rate*amount;
+   
+   if(price>=800){
+   	discount=100;
+   }
+else {
+	discount=0;
+}   
+   
+   
+   
+   if (type==4){
+   	service=price+50;
+   }
+   else {
+   	service=0;
+   }
+   
+   	printf("---Mobile Data Package Bill---");
+   
+   switch(type){
+   	case 1: 
+	printf("Package Type = Daily Pack\n");
+	break;
+   	case 2: 
+	printf("Package Type = Weekly Pack\n");
+	break;
+	case 3: 
+	printf("Package Type = Monthly Pack\n");
+	break;
+	case 4: 
+	printf("Package Type = Business Pack\n");
+	break;
+   }
+   final=price-discount+service;
+   
+   	printf("Data Amount = %d\n",amount);
+   	printf("Price = %d\n",price);
+   	printf("Discount = %d\n",discount);
+   	printf("Service Charger = %d\n",service);
+   	printf("Final Payable Amount = %d",final);
+   
+   
+   
+    return 0;
+}
+
+q3	
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,sum=0;
+    
+	for (i=1;i<=30;i++){
+	
+		if (i%3==0 && i%5==0){
+		printf("ThreeFive ");
+		sum++;
+		
+		}
+		else if (i%3==0 ){
+		printf("Three ");
+	
+		}
+		else if (i%5==0 ){
+		printf("Five ");
+		
+		}
+			
+		else {
+			printf("%d ",i);
+			
+		}
+		
+			
+	}
+	
+   printf("\nSum of all numbers that are divisible by 3 or 5: %d",sum);
+   
+    return 0;
+}
+
+q4
+
+#include <stdio.h>
+int main()
+{
+	int n,i,sum=0;     /* ';' is missing */
+printf("Enter N: ");
+scanf("%d",&n);
+for (i=1;i<n;i++)      /* '='  is missing in loop condition, it will not include N as requirement */
+	{                     
+		if (i%2==0)   /* '='  is missing so condition will not check is it equal to 0,it just assign */
+		{ 		      /* missing paranthesis */
+		sum=sum+i;
+		}
+	}
+printf("Sum of even numbers = %d",sum);
+return 0;
+}

@@ -1,0 +1,112 @@
+	//Question 1
+	int n;
+	int marks;
+	int sum=0;
+	int count=0;
+	int highmark;
+	int lowestmark;
+	float percentage;
+	float avg;
+	printf("Enter the number of student u want to enter:");
+	scanf("%d",&n);
+	count++;
+	
+	printf("Enter the marks out of 100:");
+	for(int i=1;i<=n;i++){
+	scanf("%d",&marks);
+
+	if(marks<0 || marks>100){
+		printf("error");
+		return 0;
+	}else{
+		sum=sum+i;
+	if(marks>=50){
+		printf("pass");
+		avg=marks/count;
+		printf("avg is:%.2f",avg);
+	}
+	if(marks>highestmark){
+		printf("highest marks are:%d",marks);
+		return 0;
+	}
+	if(marks<lowestmark){
+		printf("lowest marks are:%d",marks);
+	}
+	percentage=sum/count;
+	printf("percentage is:%.2f",percentage);
+}
+
+
+//Question no2
+//	//intiailizing the type of input
+//	char type;
+//	int data;
+//	int price;
+//	int cost;
+//	//taking input of type of internet 
+//	printf("enter your package type:Daily pack(d):Rs.30per GB,(Weekly Pack(w):Rs.25 per GB),(Monthly Pack(m):Rs.20per GB),(Business pack(b):Rs.15per GB):");
+//	scanf(" %c",&type);
+//	//data intiailizing and taking input of data
+//	printf("how much data(GB):");
+//	scanf("%d",&data);
+//	//here we are doing case break system in which user can freely select any type of data type which he want 
+//	switch(type){
+//		case 'd':
+//			price=30;
+//			break;
+//		case 'w':
+//			price=25;
+//			break;
+//		case 'm':
+//			price=20;
+//			break;
+//		case 'b':
+//			price=15;
+//			break;
+//	}
+//	//creating variable of cost and then finding cost
+//	cost=data*price;
+//	printf("your cost of internet is:%d",cost);
+//	//giving 100rs waiver on the cost of more than 800
+//	if(cost>800){
+//		cost=(data*price)-100;
+//		printf("\nyou got 100rupee waiver");
+//		printf("\ncost after 100rupee discount is:%d",cost);
+//	}
+//	//if user slect bussiness data type so 50rupee service charges will addded init
+//	if(type=='b'){
+//		cost=(data*price)+50;
+//		printf("\nyour cost after adding 50rupee service charges:%d",cost);
+//		
+//	}
+//	//printing type and data
+//	printf("\nyour internet type is:%c",type);
+//	printf("\nyour data amount is:%d",data);
+
+//Question no 3
+//int sum;
+//for(int i=1;i<=30;i++){
+//if(i%3==0 && i%5==0){
+//	printf("\nThreeFive:%d",i);
+//	sum=sum+i;
+//}else if(i%3==0){
+//	printf("\nfive:%d",i);
+//}else if(i%5==0){
+//	printf("\nfive:%d",i)
+//}else{
+//printf("sum is:%d",sum);
+//}
+
+
+//question 4 debugging code
+//here i added semi colon after sum
+//int n,i,sum=0;
+//printf("Enter N:");
+//scanf("%d",&n);
+////here i added equal sign between the condition so it can reach and include the n number otherwise it will not include n number
+//for(int i=1;i<=n;i++){
+//	//here i added one more equal sign for modulus 2 oterwise it will leave reminder
+//	if(i%2==0)
+//	sum=sum+i;
+//}
+//printf("Sum of even numbers=%d",sum);

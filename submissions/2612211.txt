@@ -1,0 +1,117 @@
+Q1
+
+int main() {
+	int student_marks,sum;
+	int i;
+	float avg,pass_percentage;
+	
+    int	highest_marks=0;
+    int	lowest_marks=100;
+    int	pass_count=0;
+	for(i=1;i<=5;i++){
+		printf("pls enter the marks of students=");
+		scanf("%d",&student_marks);
+		sum=sum+student_marks;
+		if(student_marks<0 || student_marks>100){
+			printf("Pls enter correct marks:");
+		}
+		else if(student_marks>highest_marks) {
+			highest_marks=student_marks;
+		}
+		else if(student_marks<lowest_marks){
+			lowest_marks=student_marks;
+		}
+		else{
+			printf("invalid input");
+		}
+		if(student_marks>50){
+			pass_count=pass_count+1;
+		}
+	}
+	avg=student_marks/5;
+	pass_percentage=(student_marks/pass_count)*100;
+	printf("highest marks=%d",highest_marks);
+	printf("lowest marks=%d",lowest_marks);
+	printf("pass count is=%d",pass_count);
+	printf("average is =%f",avg);
+	printf("pass percentage is=%f",pass_percentage);
+	
+	
+	return 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q2
+int main() {
+	int package_type,Amount_of_data,discounted_final_price,price;\\declaration of variables
+	int service_charges=50;\\declaration of variables
+	int discount=100;\\declaration of variables
+	printf("\n1.Daily Pack:Rs.30 per GB\n2.Weekly Pack:Rs.25 per GB\n3.Monthly Pack:Rs.20 per GB\n4.Business Pack:Rs.15 per GB");\\displaying the packages
+	printf("\npls enter the package type=");\\package type input from user
+	scanf("%d",&package_type);\\storing package type
+	printf("pls enter the amount of data=");\\amount of data input from user
+	scanf("%d",&Amount_of_data);\\storing amount of data
+	switch(package_type){  
+		case 1:{
+			price=Amount_of_data*30;\\calculating price
+			if (price>800){ \\condition check for price
+				discounted_final_price=price-100;\\discounted final price
+				
+			}
+			break;
+		}
+		case 2:{
+			price=Amount_of_data*25;\\calculating price
+			if (price>800){ \\condition check for price
+				discounted_final_price=price-100;\\discounted final price
+			}
+			break;
+		}
+		case 3:{
+			price=Amount_of_data*20;\\calculating price
+			if (price>800){  \\condition check for price
+				discounted_final_price=price-100; \\discounted final price
+			}
+			break;
+		}
+		case 4:{
+			price=(Amount_of_data*15)+50;\\calculating price
+			if (price>800){ \\condition check for price
+				discounted_final_price=price-100; \\discounted final price
+			}
+			break;
+		}
+		
+		
+	}
+	printf("the package type is=%d,\nthe data amount=%d,\nthe price is=%d,\nthe discount is=%d,\nfinal discounted price=%d",package_type,Amount_of_data,price,discount,discounted_final_price);\\displaying output
+	
+	return 0;
+	
+Q4
+
+int main() {
+	int n,i,sum=0;
+	printf("Enter N:");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		if(i%2==0){
+			sum=sum+i;
+		}
+	}
+	printf("Sum of even numbers=%d",sum);
+	return 0;
+}

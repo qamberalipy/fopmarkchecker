@@ -1,0 +1,88 @@
+Question no 1
+int main() {
+	int N, i;
+	printf("Enter the value of N");
+	scanf("%d", &N);
+	for (i = 1, i < =N, i++)
+	{
+		if(Marks<0 || Marks> 100);
+		printf ( Donot count the entry"):
+	}
+}
+
+
+Question no 2
+#include <stdio.h>
+int main()
+{
+	int packagetype, Amountofdata, price;
+	printf("package types to the user:\n1.Daily pack:RS.30 per GB\n2.Weekly pack:Rs.25 per GB\n3.Monthlypack:Rs20 per GB\n4.Business pack:Rs.15 per GB");
+	printf("Select the packagetype:");
+	scanf("%d",&packagetype);
+	printf("Select the amountofdata");
+	scanf("%d", &amountofdata);
+	if(price<800){
+		discount = price * 0.10;
+		printf("discount");
+	}
+	else if(Business pack )
+	{
+		printf("add Rs.50 in final amount");
+		final amount = (price - discount) + 50;
+		
+	}
+	
+	
+	
+}Question no 3
+#include <stdlio.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int num, i, sum = 0;
+	printf("Enter the value of num:");
+	scanf("%d", &num);
+	for (i = 1, i <= 30, i++)
+	{
+		if (num % 3 == 0 && num % 5 == 0)
+		{
+		printf("ThreeFive");
+	    }
+		else if (num % 3 == 0)
+		{
+		printf("Three");
+	    }
+		else if (num % 5 == 0)
+		{
+			printf("five");
+		}
+		else
+		{
+			printf("%d", num);
+		
+		}
+		sum = ( num % 3 == 0 || num % 5 == 0)
+	}
+	printf(" divide by 3 and 5, divide by only 3, divide by only 5", num)
+	return 0;
+}
+
+Question no 4:
+#include <stdio.h>
+int main()
+{
+	int n, i, sum = 0;               //add semi collon
+	printf("Enter n:");              //use small n
+	scanf("%d", &n);
+	for(i = 1, i <= n, i++){         //eliminate ; and use ,
+		if(i % 2 == 0)                //for even no use == 
+		{
+			printf("even number")    //add line for print even number
+		}
+		sum = sum + i;
+	}
+	printf("sum of even numbers = %d", sum);
+	return 0;
+	
+}

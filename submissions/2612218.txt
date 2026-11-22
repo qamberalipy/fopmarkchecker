@@ -1,0 +1,151 @@
+question no 2:
+answer:
+
+#include <stdio.h>        //include standard input/output
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {     //program starts here
+	char type;       //declare variable char
+	int data_amount;      //declare variable amount of data
+	float price,discount,service_charge,total,final_amount;   // declare variable price charges final amount
+	
+	printf("=====packages=====\n");    //hedaing of packages
+	printf("1.daily pack: rs. 30 per gb\n");   //display daily pack type of package
+	printf("2.weekly pack: rs. 25 per gb\n");   //display weekly pack type of package
+	printf("3.monthly pack: rs. 20 per gb\n");   //display monthly pack type of package
+	printf("4.business pack: rs. 15 per gb\n");  //display business pack type of package
+	
+	printf("enter type:");    //asks from user type
+	scanf(" %c",&type);      //ouput
+	
+	printf("enter data_amount");   //asks from user for data_amount
+	scanf("%d",&data_amount);      //output
+	
+	printf("\n");      //next line
+	
+	if(price>800)      //condition
+	{
+		discount = total-100;  //discount of 100
+	}
+	if('4')   //condition
+	{
+			final_amount=total+50;    //adding rs.50 service charges
+		
+	}
+	
+	
+	printf("discount = rs%.1f\n",100);  //display ouput
+	printf("charges = rs%.1f\n",50);     //display output
+	printf("final_amount = rs%.1f\n",final_amount);  //display output
+	return 0;                                    // program end here
+}
+
+question no 1:
+answer:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	
+	int n,i;
+	int marks;
+	printf("enter number of students");
+	scanf(" %d",n);
+	printf("enter marks");
+	scanf("%d",marks);
+	
+	for(i=1;i<=5;i++)
+	{
+		printf("enter marks");
+		scanf("%d",&marks);
+		if(marks<0 && marks>100){
+			printf("invalid marks");
+		}
+		else if(marks<90 && 90>=100){
+			printf("highest marks");
+		}
+		else if(marks<75 && 75>=90){
+			printf("average marks");
+		}
+		else if(marks<40){
+			printf("lowest marks");
+		}
+		else if(marks>50){
+			printf("passed");
+		}
+		else
+		{
+			printf("invalid");
+		}
+		printf("%d",marks);
+		marks--
+		printf("marks: %d\n",marks);
+	
+	}
+	
+
+	return 0;
+}
+
+
+question no 4:
+answer:
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	
+	int n,i,sum=0;  //error there should be terminator sum=0 is wrong sum=0; is correct
+	printf("Enter N:"); //no error
+	scanf("%d",&n);   //no error
+	for(i=1; i<n; i++)  //no error
+	{
+		if(i%2=0){   //error there should be a bracket
+				sum=sum+i;
+	}                   //error there should be bracket
+	printf("sum of even numbers = %d",sum);  //no error
+	return 0;                                //no error
+			
+			
+		}
+			
+	
+}
+
+question no 3:
+answer:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	
+	int num,i;
+	for(i=1;i<=30;i++)
+	{
+		if(num/3 && num/5){
+			printf("threefive");
+		}
+		else if(num/3)
+		printf("three")
+	}
+	else if(num/5){
+		printf("five")
+		
+	}
+	else{
+		print("num")
+	}
+	return 0;
+}

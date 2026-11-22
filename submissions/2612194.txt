@@ -1,0 +1,174 @@
+Q3
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/*
+int main(){
+	int n,i;//declear input:
+	printf("enter n:");//display it:
+	scanf("\n%d",&n);//store it in scanf
+	for(i=1; i<=30; i++){
+	
+	if(n/3 && n/5){
+		printf("\nthreefive");
+	}	
+   else	if(n/3){
+		printf("\nthree");
+	}
+	else if(n/5){
+		printf("\nfive");
+	}
+	else{
+		printf("n:");
+	}
+	
+	}
+	printf("%d\n",i);
+	
+}*/
+/*
+
+Q4
+int main(){
+	int i,n,sum=0;//include terminater:
+	printf("enter N");
+	scanf("%d",&n);
+	for(i=1;i<n;i++){
+		if(i%2==0){ //including==:and {perentheisis :
+		sum=sum+i;
+	}
+}//closing perentheisi:
+	printf("sum of even number=%d",sum);
+	return 0;
+}
+Q1
+int main(){
+	int n,i,marks=0;
+	printf("enter n:");
+	scanf("%d\n",&n);
+	for(i=1; i<=100; i++){
+		if(marks<0 && marks>100){
+			printf("not acceptable!!");
+		}
+		
+	}
+	
+}
+
+Q2
+int main()
+	int price;
+	float discount,servicecharge,finalamount;
+	printf("dailypack%d\n:rs=30 per GB");
+	printf("weeklypack%d\n:rs25 per GB");
+	printf("monthlypack%d\n:rs20 per GB");
+	printf("buisnesspack%d\n:rs15 per GB");
+	int dataamount;
+	printf("enter dataamount:");
+	scanf("%d\n",&dataamount);
+	int type;
+	printf("enter type(1-4)");
+	scanf("%d",&type);
+	switch(type){
+	case 1:{
+		printf("daily pack");
+		price=30;
+		break;
+	}
+	case 2:{
+		printf("weekly pack");
+		price=25;
+		break;
+	}
+	case 3:{
+		printf("monthly pack");
+		price=20;
+		break;
+	}
+	case 4:{
+		printf("buisness pack");
+		price=15;
+		break;
+	}
+	default:printf("invalid choice");
+	}
+	price=dataamount*type:
+		printf("%d",price);
+		if(price>800){
+			printf("discount!!");
+			discount=price-100;
+			printf("%d\n",discount);
+			if(type==4){
+				servicecharge=price+50;
+				printf("service charge is%d\n",servicecharge);
+			}
+			printf("discount is %d\n",discount);
+			printf("service charge is%d\n",servicecharge);
+			printf("final amount is%d\n",finalamount=discount+servicecharge);
+		}
+	}
+	
+	
+}
+int main(){
+	int i,n,sum=0;//include terminater:
+	printf("enter N");
+	scanf("%d",&n);
+	for(i=1;i<n;i++){
+		if(i%2==0){ //including==:and {perentheisis :
+		sum=sum+i;
+	}
+}//closing perentheis:
+	printf("sum of even number=%d",sum);
+	return 0;
+}
+int main(){
+	int i,n,sum=0;//include terminater:
+	printf("enter N");
+	scanf("%d",&n);
+	for(i=1;i<n;i++){
+		if(i%2==0){ //including==:and {perentheisis :
+		sum=sum+i;
+	}
+}//closing perentheisi:
+	printf("sum of even number=%d",sum);
+	return 0;
+}
+int main(){
+	int i,n,sum=0;//include terminater:
+	printf("enter N");
+	scanf("%d",&n);
+	for(i=1;i<n;i++){
+		if(i%2==0){ //including==:and {perentheisis :
+		sum=sum+i;
+	}
+}//closing perentheisi:
+	printf("sum of even number=%d",sum);
+	return 0;
+}
+int main(){
+	int n,i,marks,a,b,temp;//declare
+	printf("enter n:");//display
+	scanf("\n%d",&n);//store the value
+	for(i=1;i>=n;i++){//including loop
+		if(marks<0 && marks>100){//applying condition
+			printf("not accptable");//display
+		}
+		if(a>b){//condition
+			int temp=a;//declare
+			a=b;
+			b=temp;
+			printf("highest!!");
+		}
+		else{//condition
+			printf("lowest!!");//display
+		}
+		int percentage,average,sum;//declare
+		average=sum/n;//applying formula
+		printf("%d\n",average);//display
+		percentage=(marks/totalmarks)*100;//applying formula
+		printf("percentage is%d\n",percentage);//display
+		printf("%d\n",i);//display
+	}
+}

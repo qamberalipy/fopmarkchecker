@@ -1,0 +1,47 @@
+Q4.
+int main(int argc, char *argv[]) {
+//	int n, i, sum;                       added terminator   
+	printf ("Enter N");
+	printf ("%d", &n);
+//	if (i=1, i<=n, n++) {                replaced i<n with i<=n; replaced increment of i with increment of n
+		scanf (sum=sum+n)
+		printf ("Sum=%d,"&sum);
+    else printf ("Invalid number");
+	}
+	return 0;
+}
+
+Q3. 
+int main(int argc, char *argv[]) {
+	int val;
+	printf ("enter value");
+	scanf ("%d,"&val);
+	for (val >= 1 && val <= 30 && val/3 && val/5) {
+		printf ("Three_Five");
+	} else if (val >= 1 && val <= 30 && val/3) {
+		printf ("Three")
+	}  else if (val >=1 && val<=30 &&val/5) {
+		printf ("Five");
+	} else printf ("%d", &val);
+	return 0;
+}
+
+Q2.
+int main(int argc, char *argv[]) {
+	int pkg, amt, prc, amt
+	printf ("1. Daily Pack: Rs. 30 per GB\n");
+	printf ("2. Weekly Pack: Rs. 25 per GB\n");
+	printf ("3. Monthly Pack: Rs. 20 per GB\n");
+	printf ("4. Business Pack: Rs. 15 per GB\n");
+	printf ("Enter package type and amount of data required");
+	scanf("%d%d,"&pkg, amt);
+	scanf ("%d%d%d,prc,pkg,amt",prc=pkg*amt);
+	case A { 
+	if (prc>800) {
+		scanf (prc==prc-100);
+	}
+		break;
+	}
+	}
+	return 0;
+}

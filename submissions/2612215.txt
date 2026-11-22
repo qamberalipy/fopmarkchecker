@@ -1,0 +1,121 @@
+q2 #include<stdio.h>
+int main()
+{
+	int choice ,package;
+		float rate,total,discount,servicecharge=50.0,finalbill;
+ printf("---------*Online Mobile Data*---------\n1.Daily Packrs.30 per GB\n2.Monthly Pack.RS.20 per GB\n3.Weekly pack: Rs.25 per GB\n4.Business Pack:Rs.15 per GB\n");
+ printf("Enter your choice(1-4) :");
+ scanf("%d",&choice);
+ switch(choice)
+ {
+ 	case 1:
+ 	rate =30 ;
+	break;
+	
+	case 2:
+	rate = 25 ;
+	break;
+	
+	case 3:
+	rate = 20 ;
+	break; 
+	
+	case 4:
+	rate = 15 ;
+	break;  	
+	 
+	default:
+	printf("Error!Invalid Choice ");  
+	return 0;
+ }
+ printf("Enter a Package type (1-4): ");
+ scanf("%d",&package);
+ if(package == 1)
+ {
+ 	printf("Price  Rs.30 per GB");
+ }
+ else if(package ==2 )
+ {
+ 	printf("Price  RS.20 per GB");
+ }
+ else if (package == 3)
+ {
+ 	printf("Price  Rs.25 per GB");
+ }
+ else if (package == 4)
+ {
+ 	printf("Price  Rs.15 per GB");
+ }
+ total = package*rate; 
+ if(choice>800)
+ {
+ 	discount=total*0.100;
+ }
+ else if(choice==4)
+ {
+   total+servicecharge;
+ }
+ finalbill=total - discount;
+ printf("\n-----Receipt-----\n Package Type  %d\nData Amount :  %.2f\n Discount : %.2f\nServiceCharges   %.2f\nFinal Amount  %.2f\n",choice,rate,total,discount,servicecharge,finalbill);
+}
+
+
+q3 
+#include<stdio.h>
+int main()
+{
+	int i,num;
+	printf("Enter is divisble by 3 and 5 : ");
+	scanf("%d",&num);
+	if(num<0)
+	{
+		printf("\nError select Number from 1 to 30");
+		return 0;
+	}
+	for(i=num;i<30;i++)
+	{
+		if((i%3 ==0)&&(i % 5 !=0))
+		{
+			printf("\nIts is divisible by 3 only");
+			printf("Three");
+		}
+		else
+		{
+			printf("\nIts is divisible by 5 only");
+			printf("five");
+		}
+
+		return 0;
+	}
+	
+}
+
+q1
+#include<stdio.h>
+int main(){
+	int n ,tempt,attempt,highest ,lowest;
+		printf("enter a marks : ");
+	scanf("%d",&n);
+	for(attempt=1;attempt<100;attempt++)
+	{
+	
+
+	tempt=n;
+	if (n <0)
+	{
+		printf("/nInvalid Marks");
+		return 0;
+	}
+	if(n > 90 || n<50)
+	{
+		tempt = highest ;
+			tempt = lowest ;
+
+}
+printf("\nResult : %d ",100-attempt);
+	}
+
+
+}
+
+q4

@@ -1,0 +1,150 @@
+CODE#1:-
+
+#include<stdio.h>
+int main()
+{
+	int N, c, marks, high, low=100,sum=0,count,pr;
+	printf("Enter the Number of Students:");
+	scanf("%d",&N);
+	for(c=1;c<=N;c++)
+	{
+		printf("Enter Marks of N Students (Out of 100):");
+		scanf("%d",&marks);
+		if(marks<0 || marks>100)
+		{
+			printf("Invalid Marks Inputted by the User.");
+		}
+		else
+		{
+			if(marks>=50)
+			{
+				count++;
+			}
+		        sum+=marks;
+		}
+		
+		if(marks>high)
+		{
+			high=marks;
+		}
+		if(marks<low)
+		{
+			low=marks;
+		}
+	}
+	printf("\nHighest Marks= %d",high);
+	printf("\nLowest Marks= %d",low);
+	printf("\nAverage Marks= %d",sum/N);
+	printf("\nNo.of Students who passed (marks of 50 or more)= %d",count);
+	pr=sum/N;
+	printf("\nPass Percentage= %d%%",pr);
+}
+
+CODE#2:-
+
+#include<stdio.h>
+int main()
+{
+	int type, data, s_charge=0;
+	float price=0,discount=0,bill=0;
+	printf("====Mobile Data Package System====\n");
+	printf("1.Daily Pack: Rs.30 per GB \t\t 2.Monthly Pack: Rs.20 per GB\n");
+	printf("3.Weekly Pack: Rs.25 per GB \t\t 4.Business Pack: Rs.15 per GB\n");
+	
+	printf("\nEnter Package Type No=");
+	scanf("%d",&type);
+	printf("Enter Amount of Data (in GB)=");
+	scanf("%d",&data);
+	
+	if(type==1)
+	{
+	price=30;
+	printf("Package Type: %d",type);
+    }
+	else if(type==2)
+	{
+	price=20;
+	printf("Package Type: %d",type);
+    }
+	else if(type==3)
+	{
+	price=25;
+	printf("Package Type: %d",type);
+	}
+	else if(type==4)
+	{
+	price=15;
+	s_charge=50;
+	printf("Package Type: %d",type);
+    } 
+	else
+	{
+	printf("\nInvalid Choice!");
+	}
+	
+	bill=price*data;
+	
+	if(bill>=800)
+	{
+		discount=100;
+		bill=bill-discount;
+	}
+     bill=bill + s_charge;
+    printf("\nData Amount= %d",data);
+    printf("\nPrice= Rs.%.0f",price);
+    printf("\nDiscount= Rs.%.0f",discount);
+    printf("\nService Charge= Rs.%d",s_charge);
+    printf("\nFinal Amount= Rs.%.0f",bill);
+}
+
+
+CODE#3:-
+
+
+#include<stdio.h>
+int main()
+{
+	int c, sum=0;
+	for(c=1;c<=30;c++)
+	{
+		if(c%3==0 || c%5==0)
+		{
+			printf(" ThreeFive");
+			sum+=c;
+		}
+		else if(c%3==0)
+		{
+			printf(" Three");
+			sum+=c;
+		}
+			else if(c%5==0)
+		{
+			printf(" Five");
+			sum+=c;
+		}
+		else
+		{
+			printf(" %d",c);
+		}
+	}
+	printf("\nSum of No divisible by 3 or 5= %d",sum);
+}
+
+
+
+CODE#4:-
+
+#include<stdio.h>
+int main()
+{
+	int N, i, sum=0;       //Statement Terminator is not used and Capital N for the Number to be input by the user.
+	printf("Enter N: ");
+	scanf("%d",&N);       //Capital N for the Number to be input by the user.
+	for(i=1;i<=N;i++)    //In less than equal to operator, equal sign is not used.
+	{
+		if(i%2==0)  //In equal equal to operator, equal sign is not used.
+		sum=sum+i;
+	}
+	printf("Sum of even numbers= %d",sum);
+	return 0;
+}

@@ -1,0 +1,126 @@
+Q.1
+ans
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i;
+	float marks,num;
+	printf("enter numbers for student");
+	scanf(".%2f",);
+	for (i=1,i<=num,i++) {
+	printf("enter marks for N students ");
+		scanf("%.2f",&marks);
+	}
+if(num<0 && num>100){
+	printf("Error");
+	break;
+}
+ highest marks=>50
+ lowest marks=<50
+                                                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q.2
+ans# include <stdio.h>
+# include <stdlib.h>
+int main(){
+	int packagetype,data,amount,price,discount,servicecharge,finalamount;
+	printf("1.daily pack: rs 30 per GB");
+	printf("2.Monthly pack: rs 20 per GB");
+	printf("3.weekly pack: rs 25 per GB");
+	printf("4. business pack: rs 15 per GB");
+	scanf("%d",&amount);
+	switch:
+	 case 1:
+		printf("daily pack");
+		bill= 30*data;
+		break;
+	
+		case 2:
+			printf("monthly pack");
+			bill=20*data;
+			break;
+			
+		
+		case 3;
+		printf("weekly pack");
+		bill=25*data;
+		break;
+		
+		
+		case 4: 
+		printf("business pack");
+		bill=15*data;
+		break;
+		
+		default;
+		printf("invalid!");
+	}
+		
+}
+
+
+
+
+Q.3
+ans#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	int i,n,sum;
+	  
+	  for(i=1;i<=30;i++){
+	  	scanf("%d",&n);
+	  	
+	 
+	 if(i%3==0 && i%5==0){
+	 	printf("threefive\n");
+	 	
+	 }
+	 else
+	 if(i%3==0){
+	 	printf("three\n");
+	 }
+	 else
+	 if(i%5==0){
+	 	printf("five\n");
+}
+	 
+}
+	 return 0;
+	  	
+	
+}
+
+Q.4
+ans#include <stdio.h>
+ int main(){
+ 	int i,sum=0;
+ 	int n;
+ 	printf("enter n:");
+ 	scanf("%d",&n);
+ 	for(i=1;i<n;i++){
+ 		if(i%2==0)
+ 		sum=sum+i;
+ 		printf("sum of even numbers=%d",n);
+	 }
+	 return 0;
+}
+ 	

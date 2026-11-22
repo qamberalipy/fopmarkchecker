@@ -1,0 +1,117 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+//Q:2
+int choice,data,dis=100,after_discount;
+int additional;
+float bill;
+
+printf("1. Daily Pack: Rs. 30 per GB\n2. Monthly Pack: Rs. 20 per GB\n3. Weekly Pack: Rs. 25 per GB\nBusiness Pack: Rs. 15 per GB\nSelect Your Package Type:");
+scanf("%d",&choice);
+
+printf("Enter Your Amount of Data in GB:");
+scanf("%d",&data);
+printf("You Selected %d GB Data",data);
+
+switch(choice){
+   case 1:
+       printf("\nDaily Pack!\n");
+        bill = 30*data;
+        break;
+
+  case 2:
+       printf("\nMonthly Pack\n");
+        bill = 20*data;
+        break;
+
+  case 3:
+       printf("\nWeekly Pack\n");
+        bill = 25*data;
+        break;
+
+  case 4:
+       printf("\nBusiness Pack!\n");
+        bill = 15*data;
+        break;
+
+  default:
+    printf("\nInvalid Choice!\n");
+
+
+}
+printf("Your Bill is = Rs. %.2f\n",bill);
+
+    if(bill>800){
+        after_discount = bill-dis;
+        printf("Your Discounted bill is = Rs. %d\n",after_discount);
+    }
+    if(choice==4){
+        additional = bill + 50;
+        printf("Your Bill After Additional Charges is = Rs. %d\n",&additional);
+    }
+
+
+//Q:3
+int i,sum=0;
+
+for(i=1;i<=30;i++){
+     printf(" %d",i);
+
+    if (i%3==0 && i%5==0){
+        printf("ThreeFive");
+    }
+    else if(i%3==0){
+        printf("Three!");
+    }
+    else if(i%5==0){
+        printf("Five!");
+    }
+
+    sum+=i;
+}
+printf("\nSum = %d",sum);
+
+
+//Q:4
+int n, i, sum=0; //Terminator
+printf("Enter N:");
+scanf("%d",&n);
+for(i=1;i<n;i++)
+{
+    if(i%2==0){  //Bracket and i%2=0 to i%2==0
+        sum = sum + i;
+    }
+}
+printf("Sum of even numbers = %d",sum);
+
+//Q:1
+int i,highest,lowest,count,avg,num;
+float percentage,marks;
+
+       printf("Enter N Number of students:");
+       scanf("%d",&num);
+
+   for (i=num;i<=1;i++){
+
+       printf("Enter marks of students:");
+       scanf("%.2f",&marks);
+
+   if (marks<0 && marks>100){
+     printf("Invalid marks!");
+   }
+   avg=marks/num;
+
+   highest=marks;
+   lowest=marks;
+
+   count++;
+
+}
+printf("Average is = %d",avg);
+printf("Highest Marks = %d",highest);
+printf("Lowest Marks = %d",lowest);
+
+    return 0;
+}

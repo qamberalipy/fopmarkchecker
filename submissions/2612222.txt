@@ -1,0 +1,74 @@
+q1
+#include <stdio.h>
+
+
+int main()
+{
+    int i=1,n,marks,hishest,lowest,avg,sum=0;
+    printf("Enter the No. of students: ");
+    scanf("%d",n);
+    for(i=1;i<=n;i++){
+        printf("\nEnter the student\'marks: ");
+        scanf("%d",&marks);
+        printf("%d\n",marks);
+    }
+    return 0;
+}
+q2
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int option,price,total,amount;
+    printf("1.Daily pack Rs. 30 per GB\t2.Monthly pack Rs. 20 per GB\n3.weekly pack Rs. 25 per GB\t4.Business pack Rs. 15 per GB");
+    printf("\nEnter your option: ");
+    scanf("%d",&option);
+    if(option<=0 && option<4){
+    	printf("invalid option");
+    	return 0;
+	}
+    printf("Enter your amount of data your want: ");
+    scanf("%d",&amount);
+   if(amount<=0){
+    	printf("invalid amount");
+    	return 0;}
+if(option==1){
+    price=30;
+}
+else if (option==2){
+    price=20;
+}
+else if (option==2){
+    price=25;
+}
+else if (option==2){
+    price=15;
+}
+total=price*amount;
+printf("\nyour total is: %d",total);
+if(price<=800)
+    price=price-100;
+printf("\nyour total after discount is: %d",price);
+if(option==4){
+    price=price+50;
+    printf("\nafter +50rs service charges: %d",price);
+}
+printf("\nyou have selected %d package type and with %d amount",option,amount);
+    return 0;
+}
+q4
+#include <stdio.h>
+
+int main(){
+    int n,i,sum=0;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    for(i=1;i<n;i++){
+        if(i%2 ==0){ // {} =
+        sum=sum+i;
+    }
+    }
+    printf("sum of even numbers = %d", sum);
+    return 0;
+}

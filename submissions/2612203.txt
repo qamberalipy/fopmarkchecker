@@ -1,0 +1,154 @@
+Q3:
+	int i, sum;
+	for (i=0; i<=30; i++ ){
+		printf("\n  %d  ", i);
+		i++;
+		if (i%3==0 && i%5==0){
+			printf("ThreeFive");
+		}
+		else if (i%3==0){
+			printf("Three");
+			sum=sum+i;
+		}
+		else if (i%5==0){
+			printf("Five");
+			sum= sum+i;
+		}
+		else {
+			printf("%d", i);
+		}
+		
+		
+	}
+	printf("\nSum= %d", sum);
+	return 0;
+}
+
+
+
+Q2:
+#include <stdio.h>
+int main(){
+	int type, amount, price, discount, sc, final_amount;
+	printf("---------Package Types------------");
+	printf("\n1. Daily Pack       :Rs 30 per GB ");
+	printf("\n2. Weekly Pack      :Rs 25 per GB ");
+	printf("\n3. Monthly Pack     :Rs 20 per GB ");
+	printf("\n4. Business Pack    :Rs 15 per GB ");
+	printf("\nSelect the package type:  ");
+	scanf("%d", &type);
+	printf("\n Enter the amount of Data:  ");
+		scanf("%d", &amount);
+
+	switch (type){ 
+	if (price>800){
+		discount= amount-100;
+		final_amount= amount-discount;
+	}
+		case 1:
+			price= 30*amount;
+			
+			printf("Total amount: %d", price);
+			
+			break;
+			
+				case 2:
+			price= 25*amount;
+			printf("Total amount: %d", price);
+			break;
+			
+				case 3:
+			price= 20*amount;
+			printf("Total amount: %d", price);
+			break;
+			
+				case 4:
+					sc=50;
+			price= 15 *amount+ sc;
+			printf("Total amount: %d", price);
+			break;
+			
+	} 
+	printf("\nFinal amount: %d", final_amount);
+	printf("\nPackage type: %d", type);
+	printf("\nAmount: %d", amount);
+	printf("\nPrice: %d", price);
+	printf("\nDiscount: %d", discount);
+
+	return 0;
+}
+
+Q4:
+INCORRECT CODE
+#include <stdio.h>
+int main(){
+	int n, i, sum=0 //missing terminator
+	printf("Enter N: ");
+	scanf("%d", &n);
+	for (i=1;i<n;i++){
+		if (i%2=0) // comparison operator missing == , missing braces{} 
+		sum= sum+i;
+	}
+	printf("Sum of Even numbers= %d", sum);
+	return 0;
+}
+
+
+CORRECTED CODE
+int n, i, sum=0; //missing terminator
+	printf("Enter N: ");
+	scanf("%d", &n);
+	for (i=1;i<n;i++){
+		if (i%2==0){ // comparison operator missing == , missing braces{} 
+		sum= sum+i;
+	}
+	printf("Sum of Even numbers= %d", sum);
+	return 0;
+}
+
+
+q1: 
+#include <stdio.h>
+int main(){
+	int  marks, highest, lowest,n, avg, i, passed;
+	 printf("Enter the number of students:  ");
+	  	scanf("%d", &n);
+	  	printf("\n Enter the marks of each student:  ");
+	  	scanf("%d", &marks);
+	 
+	 
+	  for (i=1; i<=n; i++){
+	  	
+	  	if (marks<0 && marks>100){
+	  		printf("Invalid Entry! \nTry again");
+	  		continue;
+		  }
+		  if (marks>=50){
+		  	printf("Passed!", passed);
+		  }
+		  highest=marks; lowest=marks;
+		  if (marks>lowest){
+		  	printf("Highest", highest);
+		  	
+		  }
+		  else if (marks>highest){
+		  	printf("Lowest", lowest);
+		  	
+		  }
+		  avg= marks*100/n;
+		    printf("\nHighest marks: %d", highest);
+	  	  printf("\nLowest marks: %d ", lowest);
+	  printf("\nAverage marks:%d ", avg);
+	  	  printf("\nNumber of students passed :%d ", passed);
+	  	  
+
+	  }
+	
+	  
+
+	  
+	  
+	  
+	  
+	return 0;
+}

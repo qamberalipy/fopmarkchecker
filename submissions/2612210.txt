@@ -1,0 +1,105 @@
+Q1         #include <stdio.h>
+            #include <stdlib.h>
+
+
+            int main() 
+            {
+	    int n,i,marks;
+	    float highestmarks, lowestmarks, averagemarks, Totalmarks, percentage;	
+	    printf("Enter the no of students\n");
+	    scanf("%d", &n);
+
+	    printf("Enter the marks of five students out of 100\n");
+	    scanf("%d", &marks);
+	    if (marks<0 && marks>100) {
+	printf("Invalid Marks\n");
+	}
+
+
+
+
+
+
+	for (i=50; i>50;) {
+
+	printf("%d", i);
+
+	
+}
+	averagemarks=Totalmarks/n;
+	printf("The average marks are: ");	 
+	
+	
+	percentage=n\sum*100;
+	print("The percentage is: ");
+	
+	
+	
+	
+	
+	return 0;
+} 
+
+
+
+
+
+Q4       #include <stdio.h>
+
+int main() 
+{
+	int n,i,sum=0; // Terminator was missing
+	
+	printf("Enter N: ");
+	scanf("%d", &n);
+
+	for (i=1;i<n;i++) 
+	{
+		if(i%2==0) { // = was missing and if {} brackets were missing
+		
+		sum=sum+i;
+    }
+    }
+	printf("Sum of all even numbers = %d", sum);
+	
+	return 0;
+} 
+
+
+
+Q3     #include <stdio.h>
+
+int main() 
+{
+	int i,sum=0; 
+	
+	printf("Enter N: ");
+	scanf("%d", &n);
+
+	for (i=1;i>=30;i++) 
+	{
+		if(i%3==0 && i%5==0) { 
+		printf("Threefive");
+    }
+  	    else if(i%3==0) { 
+		printf("Three");
+  }
+  		 else if(i%5==0) { 
+		printf("five");
+}
+    	else(i=n) {
+		printf("The number is: ");
+		}
+    
+    
+    return 0;
+  
+}
+  
+  
+  
+
+Q2     #include <stdio.h>
+
+int main() 
+{

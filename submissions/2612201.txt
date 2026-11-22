@@ -1,0 +1,88 @@
+
+Question 01:	
+}
+
+int main(){
+	int n,i;
+	printf("Enter the students:");
+	scanf("%d",i;);
+	for(int i=1;i<=n;i++){
+		if(Marks<0 || Marks>100){
+			printf("Error: do not count that entry as student");
+		}
+	}
+	
+}
+
+
+
+Question 02:
+
+int main(){
+int packagetype,amountofdata,price;
+float finalamount;
+	printf("Packagetypes to the user:\n1.Daily pack:Rs.30 per GB\n2.Weekly pack:Rs.25 per GB\n3.Monthly pack:Rs.25 per GB\n4.Business Pack:Rs.15 per GB\n");
+	printf("Select the pakagetype:");
+		scanf("%d",&Pakagetype);
+	
+	printf("Select the amountofdata:");
+	 	scanf("%d",&amountofdata);
+
+	if(price<800){
+	discount=price*0.10;
+	printf("discount");
+  }
+  else if( business pack){
+  	printf("add Rs .50 in final amount :"):
+  	finalamount=(price-discount)+50;
+  }
+	else{
+		printf(" not valide:");
+	}
+	return 0;
+}
+
+
+
+Question 03:
+int main(){
+	int num;
+	for(int num=1;num<=30;num++){
+		if(num\3 || num\5){
+			printf("ThreeFive");
+		}
+		else if(num\3){
+			printf("Three");
+		}
+		else if(num\5){
+			printf("Five");
+		}
+		else{
+			printf("num");
+		}
+		sum=num \3  || num\5;
+	}
+	
+	printf(" divide by 3 and 5,divide by only 3,divide by only 5",num);
+}
+
+
+
+Question 04:
+int main(){
+	// Add semicolon; after 0
+	int n,i,sum=0;
+	printf("Enter N:");
+	scanf("%d",&n);
+	// as N is inculding so add = after less then
+	for(i=1;i<=n;i++){
+	//for even number  double equal to ==
+		if(i%2==0)
+		sum=sum+i;
+	}
+	printf("sum of even numbers = %d",sum);
+	return 0;
+	
+	
+	
+}

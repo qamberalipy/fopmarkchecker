@@ -1,0 +1,155 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+
+
+
+
+
+Q4	
+
+/*
+//starting we declare variable:
+int n,i,sum=0; //Terminator mistake
+//Take a number from user:
+printf("Enter N:");  
+//store a value:
+scanf("%d",&n);
+// we use loop:
+for (i=1;i<n;i++){
+// check condition i divisible by 2 and reminder 0:
+	if (i%2==0) //Equal to mistake I added 1 (=) to
+	sum=sum+i;
+}
+// print sum:
+printf("Sum of even numbers=%d",sum);  //print sum even number
+
+	return 0;
+}
+*/
+
+
+
+
+
+
+Q2
+
+/*
+int type,amount, package,price,SC=0;  //  variable declare 
+float final_bill, final_amount,discount=0;
+
+printf("---------data Package Billing System---------\n");
+printf("1. Daily Pack: Rs. 30 per GB\n");
+printf("2. Monthly Pack: Rs. 20 per GB\n");
+printf("3. Weekly Pack: Rs. 25 per GB\n");
+printf("4. Business Pack: Rs. 15 per GB\n");
+printf("-------------------------------------------------");
+
+printf("\nSelect Package type:");  // select package type from user
+scanf("%d",&type);  // store data
+
+printf("\nEnter the amount of data in (GB)");  // take amount of data from user
+scanf("%d",&amount);  // store  data
+
+//switch case:
+switch (type){
+	
+	case 1:{
+		price =30*amount;
+		break;
+	}
+	
+	case 2:{
+		price=20*amount;
+		break;
+	}
+	
+	case 3:{
+		price=25*amount;
+		break;
+	}
+	
+	case 4:{
+		price=15*amount;
+		break;
+	}
+	
+
+}
+
+if(price>800) {
+	discount=price-100; // discount calcullate
+}
+if(type==4){
+	SC=price+50; // add a service charge
+}
+final_amount=price+discount+SC;  //final amount calculated
+
+
+printf("your package type: %d",package);  //display package type
+printf("your data amount: %d",amount);  //display data amount
+printf("your price is: %d",price);  // display price 
+printf("your discount is: %f",discount); // display discount
+printf("your service charge are: %d",SC);  //  display service charge 
+printf("your final_bill is: %.2f",final_bill);  //display your final bill
+
+return 0;
+}
+
+
+
+
+Q3
+
+inti,n,sum=0;  // variable declare
+for (i=1;i<=30;i++){  // use loop
+	if(i%3==0 && i%5==0){
+		printf("ThreeFive");
+	}
+	else if (i%3==0){  // condtition
+		printf("Three");
+	}
+	else if(i%5==0){  // condition
+		printf("Five");
+	}
+	else{
+		printf("%d",i);
+	}		
+	if(i%3==0 && i%5==0){
+	sum=sum+i;
+}
+	printf("\n%d",sum);	 //print sum
+}
+return 0;
+}
+
+
+
+
+
+Q1
+
+
+int i,highest_marks,j,lowest_marks,average_marks,marks,count; // variable  declare 
+
+printf("Enter a number of student:");  //take a number of student
+scanf("%d",&n);  //store data
+
+for(i=i<=n;i++){  //use loop
+	printf("Enter your marks:"); //take a marks from user
+	scanf("%d",&marks); //store data
+	
+	if(marks<0  || marks>100){
+		printf("Invalid marks are enter");  
+		break;
+	} 
+	if(marks>=50){
+		printf("%d" &count);
+	}
+}
+return 0;
+}

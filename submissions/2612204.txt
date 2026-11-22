@@ -1,0 +1,109 @@
+Q1
+
+int main(){
+     int i,n,marks,total,highest_marks=0,count=0,lowest_marks=0,average_marks; // here variables are declared
+     printf("please enter number of students"); // number of students are asked
+     scanf("%d",&n);
+     for(i=1;i<=n;i++){
+        printf("please enter your marks:");// here marks are asked
+        scanf("%d",&marks);
+        count++;
+        if(marks<0 || marks>100){ // if marks are invalid
+            printf("invalid marks are entered!!");
+            break;
+        }
+       if(marks>=50){
+        printf("%d",count);
+       }
+
+     }
+   return 0;
+Q2
+ /*int main()
+{
+      int type,amount,price,discount = 0,sc = 0,final_amount;// here i have declared variables
+  printf("\n 1. Daily pack:RS 30 per GB"); //menu
+  printf("\n 2. Monthly pack:RS 20 per GB");
+  printf("\n 3. Weekly pack:RS 25 per GB");
+  printf("\n 4. Business pack:RS 15 per GB");
+  printf("\n please enter your package type:");// here i have asked forn package type
+  scanf("%d",&type);
+  printf("\n please enter your amount of data in GB:"); // here i have asked for amount of data
+  scanf("%d",&amount);
+  switch(type){ // here switch started for calulating price
+           case 1:{
+                price = 30*amount;
+                }
+                case 2:{
+                     price = 20*amount;
+                     }
+                     case 3:{
+                          price = 25*amount;
+                          }
+                          case 4:{
+                               price = 15*amount;
+                               }
+                               }
+                          if(price>800){
+                                        discount = price - 100; // discount appllied
+                                        }
+                                        if(type==4){
+                                                    sc = price + 50;// service charges calculated
+                                                    }
+  	                      final_amount = price + discount + sc; // final amount calculated
+  	                      printf("\n your package type is:%d",type); //displays package type
+  	                      printf("\n your data amount is:%d",amount); // displays gp amount
+  	                      printf("\n your price is:%d",price); // displays price
+  	                      printf("\n your discount is:%d",discount);// display discount
+  	                      printf("\n your service charges are:%d",sc);// display service charges
+  	                      printf("\nyour final amount is:%d",final_amount); display final amount
+
+
+  return 0;
+}
+
+
+Q3
+
+/*
+int main(){
+    int i,n=30,sum=0;// here variable are declared
+    for(i=1;i<=n;i++){ // for loop begins
+        if(i%3==0 && i%5==0){  // if number is divisible by 3 and 5 
+            printf("THREEfIVE");
+        }else if(i%3==0){ // if number is divisbile by 3
+        printf("THREE");
+        }else if(i%5==0){ // if number is divisible by 5
+        printf("FIVE");
+        }else{
+          printf("%d",i);
+        }
+        if(i%3==0 && i%5==0){ // here sum 
+            sum =sum+i;
+        }
+        printf("\n%d",sum);
+    }
+
+
+
+return 0;
+}
+*/
+
+
+
+
+
+Q4
+
+int main(){
+int n,i,sum=0;// here in the end semicolon was not written (;)
+printf("enter N:");
+scanf("%d",&n);
+for(i=1;i<n;i++){
+    if(i%2==0) // here i have added one more equal to (==) bcz its an assigment operator
+        sum =sum+i;
+}
+printf("sum of even numbers = %d",sum);
+return 0;
+}

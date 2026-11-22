@@ -1,0 +1,142 @@
+Muzaiz Mujtuba
+2612216
+Q1,
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n,i,marks,countf,count=0,high=0,low=0,avg=0;
+    printf("Input Number of students:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++){
+            printf("Enter the marks of student %d:",i);
+              scanf("%d",&marks);
+             if(marks<0 && marks>100){
+            printf("Error!Invalid Marks");
+             }
+             else if(marks<50){
+                countf++;
+             }
+             avg=avg+marks;
+            high=low=marks;
+            if(marks>high){
+    high=marks;
+        printf("Highest=%d",high);
+    }
+    else if(marks<low){
+        low=marks;
+        printf("Lowest=%d",low);
+    }
+
+    if(n>count){
+        count++;
+        }
+
+    printf("Average Marks=%d",avg/n);
+    printf("\nNumber of students=%d",count);
+    printf("\nNumber of Students Failed=%d",countf);
+
+
+
+  }
+Q2,
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int type,amount,total,discount1=0,service;
+    printf("1.Daily Pack:Rs. 30 per GB\n2.Weekly Pack:Rs. 25 per GB\n3.Monthly Pack:Rs. 20 per GB\n4.Business Pack:Rs. 15 per GB\n5.Exit\n");
+    scanf("%d",&type);
+    printf("Enter the Amount:");
+    scanf("%d",&amount);
+    switch(type)
+    case 1 :{
+        service=30*amount;
+        printf("Your Bill Is =%d ",30*service);
+        break;
+
+        case 2 :
+            service=25*amount;
+        printf("Your Bill Is =%d ",25*service);
+        break;
+
+        case 3 :
+            service=20*amount;
+        printf("Your Bill Is =%d ",service);
+        break;
+
+        case 4 :
+        printf("Your Bill Is =%d ",15*amount);
+        service=15*amount+50;
+        printf("\nAn additional amount of 50rs will be added to your total\nYour new total is=%d",service);
+        break;
+
+        case 5 :
+        printf("Thank you for shopping");
+        break;
+     }
+     if(amount>800){
+            discount1=amount-100;
+        printf("you get a discount=%d",discount1);
+     }
+     printf("\nPackage type=%d",type);
+        printf("\nData amount=%d",amount);
+           printf("\nPrice=%d",service);
+              printf("\nDiscount=%d",discount1);
+
+    return 0;
+}
+Q3,
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int i,count=0,sum3=0,sum5=0;
+for(i=1;i<=30;i++){
+    if(i%3==0 && i%5==0){
+        printf("ThreeFive\n");
+        count++;
+    }
+        else if(i%3==0){
+            printf("\nThree=%d",i);
+            sum3=sum3+i;
+
+        }
+        else if(i%5==0){
+            printf("\nFive=%d",i);
+            sum5=sum5+i;
+        }
+        else {
+            printf("%d",i);
+        }
+}
+        printf("\nTotals divisiblesof 3 and 5%d",count);
+        printf("\nSum of 3 divisibles is=%d",sum3);
+         printf("\nSum of 5 divisibles is=%d",sum5);
+
+
+
+    return 0;
+}
+Q4,
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n,i,sum=0;
+    printf("Enter N:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)//added equals to for including the last value of n
+        {
+    if(i%2==0)//added double equals to to compare both values
+        {
+        sum=sum+i;
+        }//added brackets for if condition
+        }
+        printf("Sum of Even numbers=%d",sum);
+    return 0;
+}

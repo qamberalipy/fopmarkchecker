@@ -1,0 +1,393 @@
+include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int price;
+	int type; 
+	float aodata,price,discount,sc,finalamount;
+	printf("enter fruom the following the type");
+	printf("daily package rs =30 per gb\n");
+	printf("monthly package=20 per gb\n");
+	printf("weekly package=25 per gb\n");
+	printf("business package=15 per gb\n");
+	printf("enter the amount of data");
+	scanf("%d%f",&code,&aod);
+	switch(type){
+	    case 'a':
+	    	price=30;
+	    	break;
+	    case  'b':
+		   price=20:
+		   break;
+		  case  'c:
+		  price=25;
+		  break;
+		  case  'd'	:
+		  	price=15:
+		  		break;
+		  	default:
+			  printf("invalid type");}
+			  subtotal=price*aod;
+			  if(price>=800){
+			  	if(type=='b'){
+			  		discount=subtotal+180;
+			  		else{
+			  			discount=subtotal+100+50;
+					  }
+				  }
+			  }
+			
+			  	else{
+			  		discount==0;
+			}
+				if(type=='b'){
+					sc=subtotal+50;
+				}
+				else{
+					sc=0;
+				}
+				finalprice=subtotal+sc+discount;
+				printf("price=%d",price);
+				printf("dicount=%.2f",discount);
+				printf("sc=%.2f",sc);
+				printf("final amount=%.2f",finalamount);
+
+			
+			  	
+			  
+		  
+	
+
+	
+	}
+	
+	
+	
+	
+	
+}
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i;sum=0;
+	
+	for(i=1;i=30;i++){
+		if(i%3==0&&i%5==0){
+			printf("threefive");
+			sum=sum+i;}
+			else if(i%3==0&&i%5!=0){
+				printf("three");
+				sum=0;
+			}
+			else if(i%5==0&&i%3!=0){
+				printf("five");
+				sum=0;}
+			else{
+				printf("no=%d",i);
+			}
+		
+			}
+			printf("su of no that are divisible by 3 and 5=%d",sum);
+			
+		
+			
+	
+	
+	
+
+			
+			  	
+			  
+		  
+	
+
+	
+	}
+	
+	
+	
+	
+	#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i;sum=0;
+	
+	for(i=1;i=30;i++){
+		if(i%3==0&&i%5==0){
+			printf("threefive");
+			sum=sum+i;}
+			else if(i%3==0&&i%5!=0){
+				printf("three");
+				sum=0;
+			}
+			else if(i%5==0&&i%3!=0){
+				printf("five");
+				sum=0;}
+			else{
+				printf("no=%d",i);
+			}
+		
+			}
+			printf("su of no that are divisible by 3 and 5=%d",sum);
+			
+		
+			
+	
+	
+	
+
+			
+			  	
+			  
+		  
+	
+
+	
+	}
+	
+	
+	
+	
+	#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i;sum=0;
+	
+	for(i=1;i=30;i++){
+		if(i%3==0&&i%5==0){
+			printf("threefive");
+			sum=sum+i;}
+			else if(i%3==0&&i%5!=0){
+				printf("three");
+				sum=0;
+			}
+			else if(i%5==0&&i%3!=0){
+				printf("five");
+				sum=0;}
+			else{
+				printf("no=%d",i);
+			}
+		
+			}
+			printf("su of no that are divisible by 3 and 5=%d",sum);
+			
+		
+			
+	
+	
+	
+
+			
+			  	
+			  
+		  
+	
+
+	
+	}
+	
+	
+	
+	
+	qn 2:
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i;sum=0;
+	
+	for(i=1;i=30;i++){
+		if(i%3==0&&i%5==0){
+			printf("threefive");
+			sum=sum+i;}
+			else if(i%3==0&&i%5!=0){
+				printf("three");
+				sum=0;
+			}
+
+			else if(i%5==0&&i%3!=0){
+				printf("five");
+				sum=0;}
+			else{
+				printf("no=%d",i);
+			}
+		
+			}
+			printf("su of no that are divisible by 3 and 5=%d",sum);
+			
+		
+			
+	
+	
+	
+
+			
+			  	
+			  
+		  
+	
+
+	
+	}
+	
+	
+	
+	q no 3
+	
+      
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i;sum=0;
+	
+	for(i=1;i=30;i++){
+		if(i%3==0&&i%5==0){
+			printf("threefive");
+			sum=sum+i;}
+			else if(i%3==0&&i%5!=0){
+				printf("three");
+				sum=0;
+			}
+			else if(i%5==0&&i%3!=0){
+				printf("five");
+				sum=0;}
+			else{
+				printf("no=%d",i);
+			}
+		
+			}
+			printf("su of no that are divisible by 3 and 5=%d",sum);
+			
+		
+			
+	
+	
+	
+
+			
+			  	
+			  
+		  
+	
+
+	
+	}
+	
+	
+	
+	
+	
+
+
+
+q:4
+there should be semicolon after sum=0
+
+sum=0;
+
+
+
+q:1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int N,i,marks,pass=0,hihgest marks,
+	float percentage,average;
+	for(i=1;i<=N;i++){
+		if(marks<0||marks>100){
+			printf("error message");
+		                     
+		if(mark>i){
+			highest=marks;
+			lowest=i;
+			average=marks%i;
+			
+		}
+		if(marks<i){
+		
+		  highest=marks;
+		  lowest=i;
+		  pass=pass+1;
+		  average=marks%i;
+	}
+	   if(marks>=50){
+	   	pass=pass+1;
+	   }
+	   else{
+	   	pass=0;
+	   }
+}
+	
+	percentage=pass		
+		
+			
+	printf("no :of students who pass =%d",pass);
+    printf("highest marks =%d",)	
+	
+	
+
+			
+			  	
+			  
+		  
+	
+
+	
+	}
+	
+	
+	
+	  
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

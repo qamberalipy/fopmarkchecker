@@ -1,0 +1,109 @@
+Q1.
+int i,n,marks;
+	printf("Enter Number of students:");
+	scanf("%d",n);
+	for(i=1;n<=n;i++){
+		printf("%d",marks);
+		if(marks<0&&marks>100){
+			printf("Error Message");
+		}
+	//averge 
+	int avg=i/n;
+	//highest 
+	int high=n>i
+	//lowest
+	int low=n<i
+	
+	int perc;
+	perc=n*marks/100;
+	}
+
+
+Q2.printf("DATA_PACKAGE_BILLING_SYSTEM\n");
+	printf("1.Daily Pack:Rs.30 per gb\n");
+	printf("2.Weekly Pack:Rs.25 per gb\n");
+	printf("3.Monthly Pack:Rs.20 per gb\n");
+	printf("4.Business Pack:Rs.15 per gb\n");
+	int package_type,data,package_price,AfterDiscount,FinalAmount,Service_Charge;
+	printf("Enter Package Type:");
+	scanf("%d",&package_type);
+	printf("Enter Data:");
+	scanf("%d",&data);
+	int AmountOfData=data*package_type;
+	package_price = package_type*data;
+	if(package_type==1){
+		printf("Daily Pack:Rs.30 per gb\n");
+	}
+	else if(package_type==2){
+		printf("Weekly Pack:Rs.25 per gb\n");
+	}
+	else if(package_type==3){
+		printf("Monthly Pack:Rs.20 per gb\n");
+	}
+	else if(package_type==4){
+		printf("Business Pack:Rs.15 per gb\n");
+	}
+	else{
+		printf("invalid");
+	}
+	if(package_price<800){
+		AfterDiscount=package_price-100;
+	}
+	else{
+		printf("%d",package_price);
+	}
+	if(package_type==4){
+		Service_Charge=package_price+50;
+	}
+	else{
+		printf("%d,,package_price")
+	}
+	FinalAmount=package_price+Service_Charge-AfterDiscount;
+	
+	printf("Package Price:%d\n",package_price);
+	printf("Data Amount:%d\n",data);
+	printf("Discount:%d\n",AfterDiscount);
+	printf("Service Charge:%d\n",Service_Charge);
+	printf("FinalAmount:%d\n",FinalAmount);
+}
+Q3.
+int i,sum;
+	for(i=1;i<=30;i++){
+		if(i%3==0 && i%5==0){
+			printf("ThreeFive\n");
+		}
+		else if(i%3==0){
+			printf("Three\n");
+		}
+		else if(i%5==0){
+			printf("Five\n");
+		}
+		else{
+			printf("%d,i\n");
+		}
+		if(i%5==0&&i%3==0){
+			sum=sum+i;
+		}
+                      printf("%d",sum);
+	
+Q4.
+int n,i,sum=0;  //semicolon
+	printf("Enter N:");
+	scanf("%d,&n");
+	for(i=1;i<=n;i++){   //i<=
+		if(i%2==0){ // curly bracket
+			sum=sum+i;
+		}
+		printf("Sum of even numbers =%d",sum);
+	}
+	
+
+
+		
+	
+	
+	
+	
+	
+	
+	

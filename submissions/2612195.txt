@@ -1,0 +1,128 @@
+Question no 4
+#include<stdio.h>
+int main (){
+	int n,i,sum=0; //add a ; end terminator
+	printf("Enter N: ");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){  //add an equal to to include n 
+		if(i%2==0){    add {} of if statment
+			sum=sum+i; 
+		}
+		
+	}
+	printf("Sum of all even numbers = %d",sum);
+}
+
+
+Question No 3
+
+
+#include<stdio.h>
+int main (){
+	int i,sum=0;
+	for(i=1;i<=30;i++){
+		
+		if(i%3==0 && i%5==0){
+			printf("ThreeFive\t");
+			
+		}
+		else if(i%3==0){
+			printf("Three\t");
+			sum+=i;
+		}
+		else if(i%5==0){
+			printf("Five\t");
+			sum+=i;
+		}
+		else{
+			printf("%d ",i);
+		}
+	}
+	printf("\nthe sum of all number are %d",sum);
+
+
+
+Question NO 2
+#include<stdio.h>
+int main (){
+	int type,aum,price,dis;
+	printf("1. daliy pack: Rs 30 per GB\t\t\t2. weekly pack: Rs 25 per GB\n3. monthly pack: Rs 20 per GB\t\t\t4. business pack: Rs 15 per GB");
+	printf("\nenter your type  ");
+	scanf("%d",&type);
+	printf("enter the anount of data ");
+	scanf("%d",&aum);
+		
+	switch(type){
+	
+	case 1:{
+		break;
+	
+		price=aum*30;
+		if (price>800){
+			dis=100;
+			price-=100;
+		}
+	}
+		break;
+	case2:
+	{
+		price=aum*25;
+		if (price>800){
+			dis=100;
+			price-=100;
+		}
+		break;
+	}
+	case 3:{
+		
+		price=aum*20;
+		if (price>800){
+			dis=100;
+			price-=100;
+		}
+		break;
+	}
+	case 4:{
+		price=aum*15;
+		if (price>800){
+			dis=100;
+			price-=100;
+			price-=50
+		}
+		break;
+	}
+	defult:{
+		printf("invalid type");
+		break;
+	}		
+	
+	}
+	
+	printf("price= %d",price);
+
+
+Question 1
+#include <stdio.h>
+int main(){
+	int i,n,marks,sum=0,pass;
+	printf("enter the num of student ");
+	scanf("%d",n);
+	i=n
+	for(i;i<=n;i++){
+		printf("enter the marks of student");
+		scanf("%d",&marks);
+		if (marks<0 || marks>100){
+			printf("do not count that student")
+			continu;
+		}
+		if (marks>50){
+			pass++
+		}
+		sum= sum+marks;
+		 
+	}
+	printf("the sum=%d\t avg= %d",sum,sum/n)
+}
+		
+}
+}

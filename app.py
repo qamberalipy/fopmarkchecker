@@ -312,8 +312,11 @@ def run_grading_pipeline(student_id: str, student_name: str, code_text: str, sel
         "You are an expert C code exam grader. "
         "Evaluate ONLY the provided C code against the exact rubric criteria checklist.\n"
         "Ignore minor C syntax typos (missing semicolons, missing `&` in scanf, `Case1:`, wrong format specifiers, undeclared variables).\n"
-        "Return lowercase values only: \"full\", \"partial\", or \"none\". "
-        "If the student's code clearly implements the requirement (even with different variable names like `bill` instead of `price`), mark it \"full\".\n"
+        "Return lowercase values only: \"full\", \"partial\", or \"none\".\n"
+        "Reserve `full` ONLY when the logic for that criterion is genuinely correct. "
+        "Use `partial` when the student attempted the criterion but has a clear logic bug "
+        "(e.g., using `||` instead of `&&`, dividing by `N` instead of valid count, wrong percentage formula like `sum/N`, missing `i--` on invalid input, or missing comments when required).\n"
+        "If the student's code clearly implements the requirement correctly (even with different variable names like `bill` instead of `price`), mark it \"full\".\n"
         "Reward clear logical intent. Return ONLY JSON matching the requested schema."
     )
 
@@ -348,7 +351,10 @@ def run_grading_pipeline(student_id: str, student_name: str, code_text: str, sel
                     f"CRITERIA CHECKLIST (evaluate every single field below):\n{guidelines_text}\n\n"
                     f"INSTRUCTIONS:\n"
                     f"- Return lowercase values only: \"full\", \"partial\", or \"none\".\n"
-                    f"- If the student's code clearly implements the requirement (even with different variable names like `bill` instead of `price`), mark it \"full\".\n\n"
+                    f"- Reserve `full` ONLY when the logic for that criterion is genuinely correct.\n"
+                    f"- Use `partial` when the student attempted the criterion but has a clear logic bug "
+                    f"(e.g., using `||` instead of `&&`, dividing by `N` instead of valid count, wrong percentage formula like `sum/N`, missing `i--` on invalid input, or missing comments when required).\n"
+                    f"- If the student's code clearly implements the requirement correctly (even with different variable names like `bill` instead of `price`), mark it \"full\".\n\n"
                     f"STUDENT C CODE:\n```c\n{q_code}\n```"
                 )
 

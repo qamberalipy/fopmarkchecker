@@ -1,0 +1,124 @@
+Question 1) #include <stdio.h>
+
+int main() {
+    int n;
+    int passcount = 0;
+    float totalmarks = 0;
+    float highest = -1;   // decarling lowest 
+    float lowest = 101;   // decarling highest
+    float currentmarks;
+
+    printf("Enter the number of students (N): ");
+    if (scanf("%d", &n) != 1 || n <= 0) {
+        printf("Invalid number of students. Exiting program.\n");
+    }
+
+    for (int i = 1; i <= n; i++) {
+        printf("Enter marks for student %d (0-100): ", i);
+        scanf("%f", &currentmarks);
+        if (currentmarks < 0 || currentmarks > 100) { // not counting marks
+            printf("Error: Invalid marks entered. Please enter a value between 0 and 100.\n");
+            i--; //decreament of input
+            continue;}
+        totalmarks =totalmarks+ currentmarks;
+
+        if (currentmarks > highest) { //finding high and lowest
+            highest = currentmarks;
+        }
+        if (currentmarks < lowest) {
+            lowest = currentmarks;
+        }
+        if (currentmarks >= 50) { //finding how many pass
+            passcount++;
+        }
+    }
+    float average = totalmarks/n;
+    float passpercentage = ((float)passcount/n) * 100;
+    printf(" Class Performance Statistics \n");
+    printf("Total Students Processed: %d\n", n);
+    printf("Highest Marks: %.2f\n", highest);
+    printf("Lowest Marks: %.2f\n", lowest);
+    printf("Average Marks: %.2f\n", average);
+    printf("Number of Students Passed (>= 50): %d\n", passcount);
+    printf("Pass Percentage of Class: %.2f%%\n", passpercentage);
+
+
+}
+
+
+Question 2) #include <stdio.h>
+int main(){
+	int a,rate,data,disprice=0,sercharge=0,finalprice,price; //Data type
+	printf("	Package type	\n");
+	printf("1. Daily Pack: Rs 30 per gb \n2. Weekly Pack: Rs 25 Per GB \n3. Monthly Pack: Rs 20 per GB \n4.Business Pack: Rs 15 per GB \n :");
+	scanf(" %d",&a); //Taking input
+	printf("Enter Amount of data: ");
+	scanf(" %d",&data);
+	if(a==1){        // Decarling prices
+		rate = 30;}
+	else if(a==2){ 
+	     rate = 25;}
+	else if(a==3){ 
+	     rate = 20;}  
+	else if(a==4){ 
+	sercharge=50;
+	     rate = 15;}
+	else {
+		printf("Invalid choice");
+	}	 
+	price=rate*data; //Price of Data
+	finalprice=price;
+	if(price>800){   //Adding discount
+		disprice= price-100;
+		finalprice=disprice;}
+	if(a==1){  //printing values
+	printf(" You select Dail Pack \n");}
+	else if(a==2){
+	printf(" You select Weekly Pack \n");}
+		else if(a==3){
+	printf(" You select Monthy Pack \n");}
+	else {
+		printf(" You select Business pack \n");
+	}
+	printf("Data Amount:%d \n",data);
+	printf("Price: %d \n",price);
+	printf("Discount if any %d \n",disprice);
+	printf("Service charge: %d \n",sercharge);
+	printf("Final price: %d",finalprice);
+		    
+}
+
+
+Question 3) #include <stdio.h>
+int main(){
+	int a,sum=0;
+	for (a=1;a<=30;a++){
+		if(a%3==0 && a%5==0){
+			sum=sum+a;
+			printf("ThreeFive ");
+		}
+		else if (a%3==0){
+			printf("Three ");
+		}
+		else if (a%5==0){
+			printf("Five ");
+		}
+		else {
+			printf(" %d ",a);
+		}
+	}
+	printf("Sum: %d \n",sum);
+}
+
+Question 4) #include <stdio.h>
+int main(){
+	int n,i,sum=0; // add terminator
+	printf("Entern N: "); 
+	scanf("%d",&n);
+	for(i=1;i<n;i++){ // adding <= sign to print n
+		if(i%2==0){ //add curly bracket
+		sum=sum+i;}
+	}
+	printf("Sum Of even number = %d",sum);
+	return 0;
+}

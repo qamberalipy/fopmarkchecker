@@ -1,0 +1,118 @@
+Q1):
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int amount_gb,package_type,price,discount,total_price,Business_pack;
+	printf("Enter which data package you want to buy =/\n1).Daily Pack=30rs/gb,      2).Monthly Pack=20rs/gb,\n3).Weekly Pack=25rs/gb,      4).Business Pack=15rs/gb \n Enter the type=");
+	scanf("\n%d",&package_type);
+	printf("Enter the amount of GB you want =");
+	scanf("%d",&amount_gb);
+	switch (package_type){
+		case 1:
+			price=amount_gb*30;
+			printf("You have selected = Daily package");
+			printf("\nYour total amount = %d",price);
+			break;
+		case 2:
+			price=amount_gb*20;
+			printf("You have selected= Monthly Package");
+			printf("\nYour total amount = %d",price);
+			break;
+		case 3:
+			price=amount_gb*25;
+			printf("You have selected = weekly package");
+			printf("\nYour total amount = %d",price);
+			break;
+		case 4:
+			price=amount_gb*15;
+			total_price=price+50;
+			printf("You have selected = Business package");
+			printf("\nService charges are added+50");
+			printf("\nYour total amount = %d",total_price);
+			break;
+			default:
+	           printf("Invalid input!");
+	}
+	  if(price>=800){
+	  	total_price=price-100;
+	  	printf("\nYou got an discount of = 100rs");
+	  	printf("\nYour total price after discount = %d",total_price);
+	  }
+	  else{
+	  	printf("Invalid Input!");
+	  }
+
+	  
+	return 0;
+}
+
+Q2):
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int num,i;
+	printf("ENter the number you want to check =");
+	scanf("%d",&num);
+	for(i=1;i<=30;i++){
+	if(num%3==0&&num%5==0){
+		printf("\n %d is ThreeFive",i);
+	}
+	else if(num%3==0 && num%5!=0){
+		printf("\n %d is Three",i);
+	}
+	else if(num%3!=0 && num%5==0){
+		printf("\n %d is Five",i);
+	}
+	else{
+		printf("Number = %d",num);
+	}
+	}
+	return 0;
+}
+
+Q3):
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int n,marks,i,h,l,avg,Total_marks;
+	printf("Enter number of students =");
+	scanf("%d",&n);
+	for( i=1;i<=n;i++){
+	printf("Enter the marks of students=");
+     scanf("%d",&marks);
+     if(marks<1 || marks>100){
+     	printf("Invalid marks!");
+	 }
+	 Total_marks= Total_marks+marks;
+	 printf("The total marks = %d",Total_marks);
+ }
+	return 0;
+	}
+
+Q4):
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+  int n,i,sum =0;  //Semicolon was not added in the paper
+  printf("Enter N:");
+  scanf("%d",&n);
+  for(i=1;i<n;i++){
+  	if(i%2==0) //Conditional operator == was not writen, assignment operator = was written
+     sum = sum+i;
+  }
+  printf("Sum of Even Numbers = %d",sum);
+	return 0;
+	}
+

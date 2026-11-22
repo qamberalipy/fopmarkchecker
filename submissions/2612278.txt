@@ -1,0 +1,76 @@
+Q2
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main (){
+
+    int  option , price , data , amount , discount, total;
+	printf("1.daily pack : rs 30 per gb:\n2.weekly pack : rs 25 per gb:\n3.monthly pack : rs 20 per gb: \n4.business pack : rs 15 per gb\n");
+	scanf("%d",&option);
+	if (option>=0 && option >=4){
+		printf("invalid option :");
+		return 0;
+	}
+    printf("enter the amount of data you want: ");
+    scanf("%d", &amount);
+    return 0;
+    if (option==1){
+    	price=30;
+	}
+	 else if (option==2){
+	 	price-25;
+	 }
+	 else if (option==3){
+	 	price=20;
+	 }
+	 else if (option==4){
+	 	price=15;
+	 }
+	 total=price*amount;
+	 printf("your total amount is %d " ,total);
+	 if (price<=800){
+	 
+	    price - 100;}
+	  printf("your total bill after discount is ");
+	  if (option==4){
+	  	price+50;
+	  	printf("+50 service change");
+	  }
+	return 0;
+}
+Q4
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main (){
+
+int n,i , sum=0;
+printf("enter n:");
+scanf("%d",&n);
+for(i% 2=0){
+    sum=sum+i;
+}
+printf("sum of even number =%d",sum);
+return 0;
+}
+
+Q1
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main (){
+
+	int i, n, marks, highest,lowest,avrage ,sum=0 ;
+	printf("enter the number of students");
+	scanf("%d",&n);
+
+	for(i=1;i<=1;i++);
+    printf("enter the student marks");
+    scanf("%d",&marks);
+
+	return 0;
+}
+

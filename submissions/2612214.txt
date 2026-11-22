@@ -1,0 +1,147 @@
+
+Q1
+include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int marks = 0, N;
+	float highest_marks, lowest_marks, average_marks;
+	
+	printf("Enter marks from 0-100");
+	scanf("%d", &marks);
+	
+	printf("Enter Students N");
+	scanf ("%d", &N);
+
+		while (marks > 0 && marks <= 100){
+			 if (marks >= 50){
+				printf("Passed");
+			} else if (marks < 50){
+				printf("Filed");
+			} else{
+				printf("Invalid input");
+			}
+			break;
+		}
+		highest_marks = marks;
+		lowest_marks = marks;
+		average_marks = marks * N / 100;
+		
+		printf("Highest marks: %2.f\n", highest_marks);
+		printf("Lowest marks: %2.f\n", lowest_marks);
+		printf("Average_marks: %2.f\n", average_marks);
+		
+
+}
+
+
+
+Q2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	char type;
+	int data_amount, price;
+	float discount, subtotal, service_charge = 50, final_amount;
+	
+	printf("__________Package_Type________\n");
+	printf("D -   Daily Pack:     Rs. 30 per GB\n");
+	printf("M -   Monthly Pack:   Rs. 20 per GB\n");
+	printf("W -   weekly Pack:    Rs. 25 per GB\n");
+	printf("B -   Business Pack:  Rs. 15 per GB\n");
+	printf("______________________________\n");
+	
+	printf("Enter your Type");
+	scanf(" %c", type);
+	
+	switch (type){
+		case 'd': case 'D': price = 30; break;
+		case 'm': case 'M': price = 20; break;
+		case 'w': case 'W': price = 25; break;
+		case 'b': case 'B': price = 15; break;
+		default :
+			printf("Invalid input");
+			return 1;
+		
+	}
+	
+	printf("Enter the data_amount");
+	scanf("%d", &data_amount);
+	
+	if (type == 'b'){
+		subtotal += service_charge;
+	}
+	
+	subtotal = price * data_amount;
+	
+	if (subtotal > 800){
+		discount = subtotal - 100;
+	} else {
+		printf("No discount");
+	}
+	
+	final_amount += subtotal;
+	
+	
+	printf("_______Summery_______");
+	printf("Package type:  %c", type);
+	printf("data_amount:  %d", data_amount);
+	printf("price:  %d", price);
+	printf("discount:  %.2f", discount);
+	printf("service_charge:  %.2f", service_charge);
+	printf("final_amount:  %.2f", final_amount);
+}
+
+
+
+Q3
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int num = 30, 
+	
+	for (int i = 1; i <= num; i++){
+		printf("%d", i);
+		
+		if (num / 3 == 0 && num / 5 == 0){
+			printf("ThreeFive");
+		}
+		else if (num / 3){
+			printf("Three");
+			
+		}else if(num / 5){
+			printf("Five");
+		}
+		
+	} else {
+		printf("%d", &num);
+	}
+}
+Q4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int n, i, sum = 0;
+	printf("Enter N");
+	scanf("%d", &n);
+	
+	for (int i = 1; i <= n; i++){
+		if (i % 2 == 0){
+			sum = sum + i;
+		}
+	}
+	printf("Sum of even number = %d", sum);
+	return 0;
+}

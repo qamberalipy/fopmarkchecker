@@ -1,0 +1,144 @@
+Name=Kirshna Rani.
+Section ='C'.
+ID=2612197.
+
+code# 2:
+#include <stdio.h>
+int main(){
+	int price,pack,amountofdata;
+	float packageprice=0,discount=0,servicecharges=0,finalamount=0;
+	printf("===Display package types to the user===");
+	printf("1.Daily pack.Rs.30 per Gb.");
+		printf("2.Monthly pack.Rs.20 per Gb.");
+			printf("3.Weekly pack.Rs.25 per Gb.");
+				printf("4.Bussiness pack.Rs.15 per Gb.");
+				printf("enter pack type:");
+				scanf("%d",&pack);
+				switch(pack){//for verifying the price of any pack
+					case 1:
+						price=30;
+						break;
+				case 2:
+						price=20;
+						break;
+							case 3:
+						price=25;
+						break;
+							case 4:
+						price=15;
+						break;
+						default:
+							printf("Invalid Pack:");
+							return 0;
+					}
+					printf("enter amount of data in Gb:");
+					scanf("%d",&amountofdata);
+					if(amountofdata<=0){
+						printf("invalid amount of data:");
+						return 0;
+					}
+					packageprice=price*amountofdata;
+					if(packageprice>800){
+						discount=100;
+						return 0;
+					}
+					if(pack==4){
+						servicecharges=50;
+						
+					}
+					finalamount=(packageprice-discount)+servicecharges;
+					printf("pack type is:%d\n",pack);
+					printf("amountofdata is:%d\n",amountofdata);
+					printf("discount is :%.2f\n",discount);
+					printf("service charges:%.2f\n",servicecharges);
+					printf("finalamount:%.2f\n",finalamount);
+CODE #3:)
+					
+					#include <stdio.h>
+					int main(){	
+					int a=1,b=30,i,sum=0;
+					for( i=a;i<=b;i++){
+						if(i%3==0&&i%5==0){
+							printf("ThreeFive:");
+							sum+=i;
+						
+						}
+					else if(i%3==0){
+						printf("Three:");
+						sum+=i;
+					
+					}
+					else if(i%5==0){
+						printf("Five:");
+						sum+=i;
+						
+						
+					}
+					else{
+						printf("%d",i);
+					}
+					
+							printf("numbers are :%d\n",i);
+							printf("sum is :%d\n",sum);
+					
+					}
+					return 0;
+					}
+
+
+
+CODE#4;)
+#include <stdio.h>
+int main{
+				int n,i,sum=0;//(semicolon in first line is missing)
+					printf("enter n:");
+					scanf("%d",&n);
+					for(i=1;i<=n;i++){//(in this line less than euals to n hoga (i<=n).
+						if(i%2==0){	//(in this line we apply comparison operator(==)and also paranthesis({})).
+					sum=sum+i;
+						
+					}
+				
+				}
+					printf("sum of even numbers=%d",sum);
+					return0;
+					
+				
+				
+	
+}
+CODE #1:)
+					#include <stdio.h>
+					int main(){
+					int N,marks,highest,lowest,sum=0,i,count=0;
+					float percentage=0,average=0;
+					printf("enter number of students:");
+					scanf("%d",&N);
+					for(i=1;i<=N;i++){
+						printf("enter marks:");
+						scanf("%d",&marks);
+						sum+=marks
+						;
+							
+						average=sum/N;
+						
+						if(marks<0||marks>100){
+							printf("Error:");
+						break;
+						}
+						if(marks>=50){
+							count++;
+							percentage=(sum/N);
+						}
+						
+						
+					}
+					printf("sum is :%d\n",sum);
+					printf("total number of students passes:%d\n",count);
+					printf("percentage:%f\n",percentage);
+					printf("average :%.2f\n",average);
+					
+				
+				
+	
+}

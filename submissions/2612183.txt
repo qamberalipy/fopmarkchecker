@@ -1,0 +1,112 @@
+Q1
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i,n;
+	float marks,highestmarks,lowestmarks,averagemarks,totalmarks;
+	for(i=1;i<=n;i++){
+		printf("enter the marks(1-100)");
+	scanf("%f",&marks);
+	printf("number of students");
+	scanf("%d,&n");
+	if(marks<0 || marks>100){
+		printf("error:invalid marks");
+		break;
+	}
+	totalmarks=totalmarks+marks;
+	printf("the total marks=%.2f\n",totalmarks);
+	if(marks>=50){
+		printf("pass");
+	}
+	average=totalmarks+marks;
+	printf("averge=%.2f\n",averge);
+	}
+	printf(percent>n){
+		printf("pass");
+	}
+	return 0;
+}
+Q2
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int type,amountGB;
+	float price,discount=0,servicecharge,payableamount,packageprice;
+	printf("enter the package type(1.daliy pack rs:30\n2.weekly pack rs:25\n3.monthly pack rs:20\n4.business pack rs:15\n)\n");
+	scanf("%d",&type);
+	printf("enter the amount pf GB");
+	scanf("%d",&amountGB);
+	switch(type){
+		case 1:
+			price=30;
+			break;
+			case 2:
+			price=25;
+			break;
+			case 3:
+			price=20;
+			break;
+			case 4:
+			price=15+50;
+			break;
+			default:
+				printf("invalid type");
+				break;
+	}
+	packageprice=price+amountGB;
+	if(packageprice>=800){
+		discount=packageprice-100;
+	}
+	payableamount=packageprice-discount;
+	printf("package type=%d\n",type);
+	printf("data amount=%d\n",amountGB);
+	printf("package price=%.2f\n",packageprice);
+	printf("discount=%.2f\n",discount);
+	printf("service charge=%.2f\n",servicecharge);
+	printf("final payable amount=%.2f\n",payableamount);
+	
+	return 0;
+}
+Q3
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int i;
+	for(i=1;i<=30;i++){
+		if(i%3==0 && i%5==0){
+			printf("threefive ");
+		}else if(i%3==0){
+			printf("three ");
+		}else if(i%5==0){
+			printf("five ");
+		}else{
+			printf("%d",i);
+		}
+	}
+	return 0;
+}
+Q4
+#include <stdio.h>
+int main(){
+	int n,i,sum=0;
+	printf("enter n");
+	scanf("%d",&n);
+	\\mistake:i<n,correct:i<=n
+	for(i=1;i<=n;i++){
+		\\mistake:i%2=0,correct:i%2==0
+		if(i%2==0){
+			sum=sum+i;
+		}
+	}
+	printf("sum of even numbers=%d",sum);
+	return 0;
+}

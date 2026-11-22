@@ -1,0 +1,138 @@
+Question no 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int n;
+	int marks;
+	printf("please enter your subject (1,2,3)");
+	scanf(" %f", &n);
+	printf("1. English\n");
+	printf("2. Math\n");
+	printf("3. Chemistry\n");
+	printf("4. Physics\n");
+	printf("Highest marks\n, Lowest marks\n ,Average marks\n");
+	scanf(" %d", &marks);
+	if(n>100 || n<0 ){
+		printf("Ivalid marks");
+	}
+	else if(n<=100 && n>=90){
+		printf("Highest marks");
+	}
+	else if(n<=90 && n>=70){
+		printf("Lowest marks");
+	}
+	else if(n>=50 && n<70){
+		printf("Average marks");
+	}
+	else{
+		printf("Fail");
+	}
+	
+	
+	
+	return 0;
+}
+
+
+
+
+
+Question no 2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+
+
+int main (){
+	int choice,discount,price,dataamount,finalepaybaleamount;
+	printf("Please select the package \n ");
+	printf("1. Daily pack 30 per GB\n");
+	printf("2. weekly pack 25 per GB\n");
+	printf("3. Bussiness pack 15 per GB\n");
+	printf("4. monthly pack 20 per GB\n");
+	scanf(" %d", &choice);
+	printf("please enter data amount \n");
+	printf("30 per GB \n");
+	printf("25 per GB\n");
+	printf("15 per GB\n");
+	printf("20 per GB\n");
+	scanf(" %d", &dataamount);
+	scanf(" %d", &price);
+	switch (choice){
+		case 1:
+			printf("Daily pack : %d\n",choice);
+			break;
+		case 2:
+		    printf("weekly pack : %d\n",choice);
+			break;
+		case 3:
+		    printf("Bussiness pack : %d\n",choice);
+			break;
+		case 4:
+		    printf("monthly pack : %d\n",choice);
+			break;			
+	}
+	if(price>800){
+		discount=price*0.1/100;
+	}
+	finalepaybaleamount=price-discount;
+	printf("Package type :%d\n",1);
+	printf("dataamount :%d\n",dataamount);
+	printf("price :%d\n",price);
+	printf("finalepaybaleamount :%d\n",finalepaybleamount);
+	return 0;
+}
+
+
+
+Question no 3 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+
+
+
+int main() {
+		for(int i=1; i<=30; i++){
+			if(i=3/5=0){
+				printf("Threefive");
+			else if (i=/3=0){
+			printf("Three");
+			}
+			else if(i=/5=0){
+				printf("Five");
+			}
+			else {
+				print("Number itselsf");
+			}
+			   	
+			}
+	return 0;
+}
+
+
+Question no 4
+
+
+int main() {
+	int n,i,sum=0;
+	printf("ENTER N");
+	scanf(" %d",&n);
+	for (i=1;i<n;i++){
+	}
+		if(i%2==0){
+			sum=sum+i;
+		}
+			printf("sum of even numbers");
+	return 0;
+}

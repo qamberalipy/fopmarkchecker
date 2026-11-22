@@ -1,0 +1,98 @@
+Q4
+#include<stdio.h>
+int main(){
+	int n,i,sum=0;//here terminator was missing  
+	printf("Enter N:");
+	scanf("%d",&n);
+	for(i=1;i<n;i++)
+	{
+		if(i%2==0)//add double equal
+		sum=sum+i;
+	}
+	printf("sum of even numbers is %d,sum");
+	return 0;
+	
+}
+Q2
+#include<stdio.h>
+int main(){
+	int package,choice,data,total;
+	float  rate,discount,servicecharge=50,finalbill;
+	printf("---online Mobile Data---\n1.Daily pack Rs.30 per GB\n2.Monthly pack Rs.20 per GB\n3.Weekly Pack Rs.25 per GB\n4.Business Pack Rs.15 per GB");
+	printf("Enter your choice");
+	scanf("%d",&choice);
+	switch(choice)
+	{
+		case 1:
+		rate=30;
+		break;
+		
+		case 2:
+		rate=20;
+		break;
+		
+		case 3:
+		rate=25;
+		break;
+		
+		case 4:
+		rate=15;
+		break;
+
+		default:
+		printf("invalid choice");	
+	}
+	printf("enter a package type(1-4):");
+	scanf("%d",&package);
+	if(package==1){
+		printf("price is Rs.30 per GB");
+	}
+	else if(package==2){
+		printf("price is Rs.20 per GB");
+	}
+	else if(package==3){
+		printf("price is Rs.25 per GB");
+	}
+	else if(package==4){
+		printf("price is Rs.15 per GB");
+
+	total=package*rate;
+	if(choice>800){
+		discount=total*0.100;
+	}
+	else if{
+		(choice==0)
+		total+50;
+	}
+	
+	finalbill=total-discount;
+
+	printf("--Reciept--\n package type %d\ndata amount: %.2f\nprice %.2f\ndiscount:%.2f\nservice charges %.2f\nfinal bill %.2f\n",package,rate,total,discount,servicecharge,finalbill);
+}
+}
+
+Q1
+
+#include<stdio.h>
+int main(){
+	int n,tempt,marks,attempt,highest,lowest;
+	for(attempt=1;attempt<100;attempt++)
+	{
+		printf("enter marks:");
+		scanf("%d",&n);
+		tempt=n;
+		if(n<=0){
+			printf("invalid marks");
+		}
+		if(marks>90){
+		tempt=highest;
+	}
+	if(marks<50){
+		tempt=lowest;
+	}
+	if(marks>=50){
+		printf("passed");
+	}
+	}
+
+}

@@ -1,0 +1,142 @@
+Q1
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	int studentcount=0,marks,originalcount,i,highestmarks=0,lowestmarks=100,passedstd;
+	float averagemarks=0,sum,classpercentage=0;
+	printf("Enter The Number Of Student:");     // number of Students Taken N=studentcount
+	scanf("%d",&studentcount);
+	if(studentcount<0){
+		printf("Enter Valid Number Of Students");    //checking if student count is valid
+		return 0;
+	}
+	originalcount=studentcount;
+	for(i=1;i<=studentcount;i++){
+		printf("\nEnter Student Marks Out Of 100=");       //taking marks input
+		scanf("%d",&marks);
+		if(marks<0 || marks>100){
+			printf("\nError Enter Marks Out of 100");          //checking marks id out of 100
+			i--;
+		}
+		else{
+			if(marks>highestmarks){
+				highestmarks=marks;						 //checking highest and lowest marks 								
+			}
+			if(marks<lowestmarks){
+				lowestmarks=marks;
+			}
+			sum=sum+marks;                         // sum of marks
+			}	
+		if(marks>=50){
+			passedstd=passedstd+1;					// student passed with 50% or More Count				
+		}	
+	}
+	averagemarks= sum/originalcount;          // Average Of class
+	classpercentage=sum/(originalcount);        // Class Percentage calculated
+	printf("\nHighest Marks=%d \nLowest Marks=%d \nAverage Marks=%.2f",highestmarks,lowestmarks,averagemarks);
+	printf("\nNumber of Students Passed=%d \nClass Percentage=%.2f%%",passedstd,classpercentage);
+			
+}
+
+
+
+Q2
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	int package,dataamount,discount=0,servicecharge=0;
+	float bill,oribill;
+	printf("------------------Packages------------------");
+	printf("\n1.Daily Pack:30 per GB \n2.Weekly Pack:25 per GB  \n3.Monthly Pack:20 per GB  \n4.Business Pack:15 per GB");
+	printf("\nChoose From The following packages 1-4=");        //Output of Package Type and taking iput from user 
+	scanf("%d",&package);	
+	if(package<1 && package>4){
+		printf("\nEnter Valid Package Type=");
+		return 0;                                     // Valid Package taken check
+	}
+	printf("\nEnter The Amount Of Data=");
+	scanf("%d",&dataamount);
+	switch(package){
+		case 1:{
+			bill=dataamount*30;
+			printf("\nDaily Pack:30 per GB");                    //Switch Case For Bill Calculation
+			break;
+		}
+		case 2:{
+			bill=dataamount*25;
+			printf("\nWeekly Pack:25 per GB");
+			break;
+		}
+		case 3:{
+			bill=dataamount*20;
+			printf("\nMonthly Pack:20 per GB");
+			break;
+		}
+		case 4:{
+			bill=dataamount*15;
+			printf("\nBusiness Pack:15 per GB");
+			break;
+		}
+		default:{
+			printf("Invalid Amount of GB");
+			break;
+		}	
+	}
+	oribill=bill;
+	if(bill>800){                               //applying Discount
+		discount=100;
+		bill=bill-discount;
+	}
+	if(package==4){
+		servicecharge=50;                     // Applying Surcharge
+		bill=bill+servicecharge;
+	}
+	printf("\nData Amount=%d GB  \nPrice=%.2f \nDiscount=%d \nService Charge=%d",dataamount,oribill,discount,servicecharge);
+	printf("\nFinal Payable Amount=%.2f",bill);         // Final output Of everything 
+	
+}
+
+
+Q3
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	int i,sum=0;
+	for(i=1;i<=30;i++){
+		if(i%3==0 && i%5==0){  
+			printf("ThreeFive ");    //all that are divided by 3 or 5 is written as threefive
+			sum=sum+i;
+		}
+		else if(i%3==0){
+			printf("Three ");          // all that are divided by 3 is written as three
+			sum=sum+i;
+		}
+		else if(i%5==0){
+			printf("Five ");           // all that are divided by 5 is written as five
+			sum=sum+i;	                // sum is taken for number 
+		}
+		else{
+			printf("%d ",i);
+		}
+	}
+	printf("\nSum Of all Numbers Divisible by 3 or 5=%d",sum);
+}
+
+Q4
+#include<stdio.h>
+
+int main(){
+	int n,i,sum=0;     // missing Terminator added
+	printf("Enter N:");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){       //i is equal or less than = added N is also Included  
+	 if(i%2==0){              // double == will come we are checking the condition    also { opened for if
+		sum=sum+i;
+	}
+	}
+	printf("Sum of even numbers=%d",sum);
+	return 0;
+}

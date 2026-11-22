@@ -1,0 +1,272 @@
+Question no # 1
+#include<stdio.h>
+
+int main()
+
+{
+
+int n, i, sum,p,high,low,avg;
+
+printf("Enter your marks out of 100:"); //User Input
+
+scanf("%d",&n);
+
+
+if (n<0 || n>100)
+
+{
+
+printf("Invalid Marks Rejected."); //Rejection for Invalid Input
+
+return 0;
+
+}
+
+sum=n;
+
+
+for (i=1; i<n; i++) //Loop Added
+
+{
+
+if (sum/500*100)
+
+{
+
+printf("Highest Marks");
+
+}
+
+if (sum/n);
+
+{
+
+printf("Lowest Marks");
+
+}
+
+if (sum*n/100)
+
+{
+
+printf("Average Marks");
+
+}
+
+
+Percentage=sum/5*100 //Pass Percent of class
+
+printf("Total pass percentage: is %d",p);
+
+
+if (n>50) //Passing Condition
+
+printf("Student Passed");
+
+else
+
+printf("Student Failed");
+
+
+
+printf("Highest Marks is: %d",High*sum/100);
+
+printf("Lowest Marks is: %d",Low*sum/100);
+
+printf("Average is: %d",Avg*sum/100);
+
+}
+
+return 0;
+
+}
+
+Question No # 2
+#include<stdio.h>
+
+int main()
+
+{
+
+int package type, data amount, price, total price;
+
+printf("Types of Data Packages");
+
+printf("\n1. Daily Pack: Rs 30 per GB\n2. Weekly Pack: Rs. 25 per GB\n3. Monthly Pack: Rs. 20 per GB\n4. Business Pack\n5. Exit"); //Package Menu
+
+scanf("%d",&package type);
+
+
+total price=package type //Package Calculation
+
+
+if(n==1)
+
+{
+
+printf("Daily Package: Rs 30 per GB");
+
+}
+
+
+if(n==2)
+
+{
+
+printf("Weekly Package: Rs 25 per GB"); //Prices & Data Amount
+
+}
+
+if(n==3)
+
+{
+
+printf("Monthly Package: Rs 20 per GB");
+
+}
+
+if(n==4)
+
+{
+
+printf("Business Package: Rs 15 per GB");
+
+}
+
+if(n==5)
+
+{
+
+printf("Invalid Input");
+
+return 0;
+
+}
+
+
+switch (package)
+
+{
+
+case 1:
+
+printf("Daily Package",package type*30 );
+
+break;
+
+case 1:
+
+printf("Weekly Package",package type*25 );
+
+break;
+
+case 1:
+
+printf("Monthly Package",package type*20 );
+
+break;
+
+case 1:
+
+printf("Daily Package",package type*15 );
+
+break;
+
+}
+
+if (price > 800) //Total Discount Applied
+
+{
+
+printf("Total Discount Applied is: %d",price-100);
+
+}
+
+if (n==4)
+
+{
+
+printf("Service Charges Added for Business Plan",total price+50); //Business Service Charges Applied
+
+}
+
+return 0;
+
+}
+
+Question No # 3
+#include<stdio.h>
+
+int main()
+
+{
+
+int num, i;
+
+printf("Enter Number:");
+
+scanf("%d",&num);
+
+for(i=1; i<5; i++)
+
+{
+
+if(num%3==0&&num%5==0){
+
+printf("\n%d ThreeFive",i);
+
+}
+
+else if(num%3==0 && num%5!=0){
+
+printf("\n%d Three",i);
+
+}
+
+else if(num%5==0 && num%3!=0){
+
+printf("\n%d Five",i);
+
+}
+
+else
+
+printf("\n3 and 5");
+
+
+printf("\n %d Sum of all numbers divisible by 3 or 5",num,i);
+
+}
+
+return 0;
+
+}
+
+Question No # 4
+#include<stdio.h>
+
+int main()
+
+{
+
+int n, i, sum = 0; //Added Terminator ';'
+
+printf("Enter N:");
+
+scanf("%d",&n);
+
+for(i=1; i<=n; i++) //Added '=' b/w i<n
+
+{
+
+if(i%2 == 0) //Added '=' b/w 2 & 0
+
+sum = sum + 1;
+
+}
+
+printf("Sum of even numbers = %d",sum);
+
+return 0;
+
+}
