@@ -31,7 +31,7 @@ class Q1Checklist(BaseModel):
         ..., description="checks if count == 2 to display Prime or Composite"
     )
     comments_output: Literal["full", "partial", "none"] = Field(
-        ..., description="comments and clear output present"
+        ..., description="clear output present"
     )
 
 class Q2Checklist(BaseModel):
@@ -54,7 +54,7 @@ class Q2Checklist(BaseModel):
         ..., description="computes final total bill = discounted amount + tax"
     )
     output_comments: Literal["full", "partial", "none"] = Field(
-        ..., description="displays all 6 bill details and comments"
+        ..., description="displays all 6 bill details"
     )
 
 class Q3Checklist(BaseModel):
@@ -71,7 +71,7 @@ class Q3Checklist(BaseModel):
         ..., description="displays Card Blocked after 3 wrong attempts"
     )
     comments_clarity: Literal["full", "partial", "none"] = Field(
-        ..., description="comments and readable structure"
+        ..., description="readable structure & clarity"
     )
 
 class Q4Checklist(BaseModel):
@@ -102,7 +102,7 @@ RUBRIC_CONFIG = {
             "find_display_factors": "Find factors (n % i == 0) & display on one line (1.5)",
             "count_and_sum": "Count total factors & sum of all factors (1.5)",
             "prime_composite": "Display Prime (count == 2) or Composite (1.5)",
-            "comments_output": "Comments & clear output (0.5)",
+            "comments_output": "Clear output present (0.5)",
         }
     },
     "Q2": {
@@ -125,7 +125,7 @@ RUBRIC_CONFIG = {
             "discount": "15% discount if nights > 5 [partial if >= 5] (1.0)",
             "tax_calc": "8% tax on discounted amount (1.0)",
             "total_bill": "Total bill = discounted amount + tax (1.0)",
-            "output_comments": "Display all 6 outputs & comments (0.5)",
+            "output_comments": "Display all 6 bill details (0.5)",
         }
     },
     "Q3": {
@@ -144,7 +144,7 @@ RUBRIC_CONFIG = {
             "access_granted": "Check PIN == 4321, print 'Access Granted' & stop (1.0)",
             "attempts_left": "Display attempts left on wrong PIN (1.0)",
             "card_blocked": "Display 'Card Blocked' after 3 wrong attempts (0.5)",
-            "comments_clarity": "Comments & readable structure (0.5)",
+            "comments_clarity": "Readable structure & clarity (0.5)",
         }
     },
     "Q4": {
@@ -251,13 +251,44 @@ def split_and_classify(raw_text: str) -> dict[str, str]:
     return assigned
 
 # =====================================================================
-# Layer 3: Deterministic Score Calculation
+# Layer 3: Deterministic Score Calculation & Guardrails
 # =====================================================================
 
-def calculate_question_score(q_key: str, checklist_data: dict | None, detected: bool) -> tuple[float, list[dict]]:
+def has_real_comments(code: str) -> bool:
+    """Check if code contains user comments after stripping default Dev-C++ boilerplate."""
+    if not code:
+        return False
+    # Strip Dev-C++ default console pauser comment block
+    cleaned = re.sub(r'(?is)/\*.*?(?:console pauser|run this program).*?\*/', '', code)
+    # Check if // or /* still exists in the code
+    return bool(re.search(r'//|/\*', cleaned))
+
+def apply_guardrails(q_key: str, checklist_data: dict, q_code: str) -> dict:
+    """Apply deterministic Python guardrails to prevent LLM generosity bias."""
+    if not checklist_data or not q_code:
+        return checklist_data
+
+    # Guardrails apply ONLY to Q4 (comments are ignored in Q1, Q2, Q3)
+    if q_key == "Q4":
+        # Guardrail 1: Ignore Dev-C++ boilerplate comments, require real comments for Q4 full marks
+        if not has_real_comments(q_code):
+            for field in ["fix_for_semicolons", "fix_logical_and", "fix_printf_comma"]:
+                if field in checklist_data and str(checklist_data[field]).strip().lower() == "full":
+                    checklist_data[field] = "partial"
+
+        # Guardrail 2: Q4 '&&' hard check: if "&&" not present in q_code, force fix_logical_and to "none"
+        if "&&" not in q_code:
+            checklist_data["fix_logical_and"] = "none"
+
+    return checklist_data
+
+def calculate_question_score(q_key: str, checklist_data: dict | None, detected: bool, q_code: str = "") -> tuple[float, list[dict]]:
     """Convert full/partial/none checklist into numerical mark, applying rounding and floor."""
     if not detected or not checklist_data:
         return 0.0, []
+
+    if q_code:
+        apply_guardrails(q_key, checklist_data, q_code)
 
     cfg = RUBRIC_CONFIG[q_key]
     weights = cfg["weights"]
@@ -301,10 +332,12 @@ def run_grading_pipeline(student_id: str, student_name: str, code_text: str, sel
         "You are an expert C code exam grader for BSCS-1B. "
         "Evaluate ONLY the provided C code against the exact rubric criteria checklist.\n"
         "Ignore minor C syntax typos (missing semicolons, missing `&` in scanf, `Case1:`, wrong format specifiers, undeclared variables).\n"
+        "For Q1, Q2, and Q3, completely IGNORE missing comments—do NOT deduct marks if the student wrote no comments. "
+        "ONLY require comments in Q4 (in Q4, award 'full' if a bug is fixed AND commented, or 'partial' if fixed without a comment).\n"
         "Return lowercase values only: \"full\", \"partial\", or \"none\".\n"
         "Reserve `full` ONLY when the logic for that criterion is genuinely correct. "
         "Use `partial` when the student attempted the criterion but has a clear logic bug "
-        "(e.g., using `>= 5` instead of `> 5`, applying tax before discount, missing `break` after Access Granted, missing comments when required, or fixing a Q4 bug without commenting it).\n"
+        "(e.g., using `>= 5` instead of `> 5`, applying tax before discount, missing `break` after Access Granted, or fixing a Q4 bug without commenting it).\n"
         "If the student's code clearly implements the requirement correctly (even with different variable names), mark it \"full\".\n"
         "Reward clear logical intent. Return ONLY JSON matching the requested schema."
     )
@@ -339,8 +372,10 @@ def run_grading_pipeline(student_id: str, student_name: str, code_text: str, sel
                     f"CRITERIA CHECKLIST (evaluate every single field below):\n{guidelines_text}\n\n"
                     f"INSTRUCTIONS:\n"
                     f"- Return lowercase values only: \"full\", \"partial\", or \"none\".\n"
+                    f"- For Q1, Q2, and Q3, completely IGNORE missing comments—do NOT deduct marks if the student wrote no comments.\n"
+                    f"- ONLY require comments in Q4 (in Q4, award 'full' if a bug is fixed AND commented, or 'partial' if fixed without a comment).\n"
                     f"- Reserve `full` ONLY when the logic for that criterion is genuinely correct.\n"
-                    f"- Use `partial` when the student attempted the criterion but has a clear logic bug or missed comments.\n"
+                    f"- Use `partial` when the student attempted the criterion but has a clear logic bug.\n"
                     f"- If the student's code clearly implements the requirement correctly (even with different variable names), mark it \"full\".\n\n"
                     f"STUDENT C CODE:\n```c\n{q_code}\n```"
                 )
@@ -372,7 +407,8 @@ def run_grading_pipeline(student_id: str, student_name: str, code_text: str, sel
                     )
                     validated = {k: "none" for k in cfg["weights"].keys()}
 
-                score, breakdown = calculate_question_score(q_key, validated, detected=True)
+                apply_guardrails(q_key, validated, q_code)
+                score, breakdown = calculate_question_score(q_key, validated, detected=True, q_code=q_code)
                 results[q_key] = {
                     "detected": True,
                     "checklist": validated,
